@@ -23,7 +23,7 @@ $GPOSummary = Backup-GPOZaurr `
     -BackupPath "$Env:UserProfile\Desktop\GPO" `
     -Verbose `
     -Type Disabled, Empty `
-    -IncludeDomains 'ad.evotec.pl'
+    -IncludeDomains 'corp.example.com'
 
 $GPOSummary | Format-Table -AutoSize
 

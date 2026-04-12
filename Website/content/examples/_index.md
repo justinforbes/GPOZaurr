@@ -4,7 +4,7 @@ description: "Curated examples for common Group Policy administration and cleanu
 layout: docs
 ---
 
-These examples are maintained with the GPOZaurr repository and chosen for the website because they explain a real administrative workflow.
+These GPOZaurr examples focus on practical Group Policy review and backup patterns rather than the full raw example set.
 
 ## Featured examples
 
