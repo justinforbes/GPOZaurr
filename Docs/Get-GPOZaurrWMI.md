@@ -1,21 +1,17 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrWMI
-
 ## SYNOPSIS
 Get Group Policy WMI filter
 
 ## SYNTAX
-
-```
-Get-GPOZaurrWMI [[-Guid] <Guid[]>] [[-Name] <String[]>] [[-Forest] <String>] [[-ExcludeDomains] <String[]>]
- [[-IncludeDomains] <String[]>] [[-ExtendedForestInformation] <IDictionary>] [-AsHashtable]
- [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Get-GPOZaurrWMI [[-Guid] <guid[]>] [[-Name] <string[]>] [[-Forest] <string>] [[-ExcludeDomains] <string[]>] [[-IncludeDomains] <string[]>] [[-ExtendedForestInformation] <IDictionary>] [-AsHashtable] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,60 +20,33 @@ Get Group Policy WMI filter
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
-Get-GPOZaurrWMI -AsHashtable
+```powershell
+PS > Get-GPOZaurrWMI -AsHashtable
 ```
 
+
 ### EXAMPLE 2
+```powershell
+PS > Get-GPOZaurrWMI | Format-Table
 ```
-Get-GPOZaurrWMI | Format-Table
-```
+
 
 ## PARAMETERS
 
-### -Guid
-Search for specific filter using GUID
+### -AsHashtable
+Return output as hashtable
 
 ```yaml
-Type: Guid[]
-Parameter Sets: (All)
-Aliases:
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: 1
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-Search for specific filter using Name
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Forest
-Target different Forest, by default current forest is used
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ForestName
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExcludeDomains
@@ -85,29 +54,15 @@ Exclude domain from search, by default whole forest is scanned
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: 4
+Position: 3
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeDomains
-Include only specific domains, by default whole forest is scanned
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: Domain, Domains
-
-Required: False
-Position: 5
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
@@ -115,29 +70,79 @@ Ability to provide Forest Information from another command to speed up processin
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: 6
+Position: 5
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
-### -AsHashtable
-Return output as hashtable
+### -Forest
+Target different Forest, by default current forest is used
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Type: String
+Parameter Sets: __AllParameterSets
+Aliases: ForestName
+Possible values: 
 
 Required: False
-Position: Named
-Default value: False
+Position: 2
+Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
+```
+
+### -Guid
+Search for specific filter using GUID
+
+```yaml
+Type: Guid[]
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -IncludeDomains
+Include only specific domains, by default whole forest is scanned
+
+```yaml
+Type: String[]
+Parameter Sets: __AllParameterSets
+Aliases: Domain, Domains
+Possible values: 
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -Name
+Search for specific filter using Name
+
+```yaml
+Type: String[]
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -145,9 +150,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+- `None`
+
 ## OUTPUTS
 
-## NOTES
-General notes
+- `None`
 
 ## RELATED LINKS
+
+- None
+

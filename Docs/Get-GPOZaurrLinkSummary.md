@@ -1,126 +1,134 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrLinkSummary
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves a summary of GPO links based on specified criteria.
 
 ## SYNTAX
-
-```
-Get-GPOZaurrLinkSummary [[-Report] <String[]>] [-UnlimitedProperties] [[-Forest] <String>]
- [[-ExcludeDomains] <String[]>] [[-IncludeDomains] <String[]>] [[-ExtendedForestInformation] <IDictionary>]
- [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Get-GPOZaurrLinkSummary [[-Report] <string[]>] [[-Forest] <string>] [[-ExcludeDomains] <string[]>] [[-IncludeDomains] <string[]>] [[-ExtendedForestInformation] <IDictionary>] [-UnlimitedProperties] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This function retrieves a summary of GPO links based on the provided parameters. It categorizes the links into different types and provides detailed information about each link.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Get-GPOZaurrLinkSummary -Forest "Contoso" -IncludeDomains "Domain1", "Domain2" -Report "MultipleLinks"
+Retrieves a summary of GPO links for the specified forest and included domains, focusing on multiple links.
 ```
 
-{{ Add example description here }}
+
+### EXAMPLE 2
+```powershell
+PS > Get-GPOZaurrLinkSummary -Forest "Fabrikam" -ExcludeDomains "Domain3" -Report "OneLink"
+Retrieves a summary of GPO links for the specified forest excluding Domain3, focusing on a single link.
+```
+
 
 ## PARAMETERS
 
 ### -ExcludeDomains
-{{ Fill ExcludeDomains Description }}
+Specifies an array of domains to exclude from the report.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
-{{ Fill ExtendedForestInformation Description }}
+Specifies additional information about the forest.
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 4
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Forest
-{{ Fill Forest Description }}
+Specifies the forest name to retrieve GPO links from.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: ForestName
+Possible values: 
 
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
-{{ Fill IncludeDomains Description }}
+Specifies an array of domains to include in the report.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
 Position: 3
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Report
-{{ Fill Report Description }}
+Specifies the type of report to generate. Valid values are 'All', 'MultipleLinks', 'OneLink', and 'LinksSummary'. Default is 'All'.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: All, MultipleLinks, OneLink, LinksSummary
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: All, MultipleLinks, OneLink, LinksSummary
 
 Required: False
 Position: 0
-Default value: None
+Default value: All
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -UnlimitedProperties
-{{ Fill UnlimitedProperties Description }}
+Indicates whether to include unlimited properties in the report.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -128,11 +136,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

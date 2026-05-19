@@ -1,126 +1,127 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrOrganizationalUnit
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves information about Group Policy Objects (GPOs) linked to Organizational Units (OUs) within a specified forest.
 
 ## SYNTAX
-
-```
-Get-GPOZaurrOrganizationalUnit [[-Forest] <String>] [[-ExcludeDomains] <String[]>]
- [[-IncludeDomains] <String[]>] [[-ExtendedForestInformation] <IDictionary>] [[-Option] <String[]>]
- [[-ExcludeOrganizationalUnit] <String[]>] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Get-GPOZaurrOrganizationalUnit [[-Forest] <string>] [[-ExcludeDomains] <string[]>] [[-IncludeDomains] <string[]>] [[-ExtendedForestInformation] <IDictionary>] [[-Option] <string[]>] [[-ExcludeOrganizationalUnit] <string[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This function retrieves detailed information about the GPOs linked to OUs within a specified forest. It provides information on linked GPOs, objects within OUs, and counts of objects at different levels.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Get-GPOZaurrOrganizationalUnit -Forest "contoso.com" -IncludeDomains "child.contoso.com" -ExcludeDomains "test.contoso.com" -ExtendedForestInformation $ExtendedInfo -Option "OK" -ExcludeOrganizationalUnit "OU=Test,DC=contoso,DC=com"
+Retrieves information about GPOs linked to OUs in the "contoso.com" forest, including the "child.contoso.com" domain, excluding the "test.contoso.com" domain, with additional forest information, performing the 'OK' action, and excluding the "OU=Test,DC=contoso,DC=com" OU.
 ```
 
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -ExcludeDomains
-{{ Fill ExcludeDomains Description }}
+Specifies an array of domains to exclude from processing.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExcludeOrganizationalUnit
-{{ Fill ExcludeOrganizationalUnit Description }}
+Specifies an array of OUs to exclude from processing.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: ExcludeOU, Exclusions
+Possible values: 
 
 Required: False
 Position: 5
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
-{{ Fill ExtendedForestInformation Description }}
+Specifies additional information about the forest.
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 3
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Forest
-{{ Fill Forest Description }}
+Specifies the name of the forest to retrieve information from.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: ForestName
+Possible values: 
 
 Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
-{{ Fill IncludeDomains Description }}
+Specifies an array of domains to include for processing.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Option
-{{ Fill Option Description }}
+Specifies the action to perform on the retrieved data. Valid values are 'OK', 'Unlink', or 'Delete'.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: OK, Unlink, Delete
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: OK, Unlink, Delete
 
 Required: False
 Position: 4
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -128,11 +129,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

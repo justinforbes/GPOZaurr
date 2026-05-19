@@ -1,73 +1,73 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrLink
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves Group Policy Object (GPO) links based on specified criteria.
 
 ## SYNTAX
-
 ### Linked (Default)
-```
-Get-GPOZaurrLink [-Linked <String[]>] [-Limited] [-SkipDuplicates] [-GPOCache <IDictionary>] [-Forest <String>]
- [-ExcludeDomains <String[]>] [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>]
- [-AsHashTable] [-Summary] [<CommonParameters>]
+```powershell
+Get-GPOZaurrLink [-Linked <string[]>] [-Limited] [-SkipDuplicates] [-GPOCache <IDictionary>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-AsHashTable] [-Summary] [<CommonParameters>]
 ```
 
 ### ADObject
-```
-Get-GPOZaurrLink -ADObject <ADObject[]> [-Limited] [-SkipDuplicates] [-GPOCache <IDictionary>]
- [-Forest <String>] [-ExcludeDomains <String[]>] [-IncludeDomains <String[]>]
- [-ExtendedForestInformation <IDictionary>] [-AsHashTable] [-Summary] [<CommonParameters>]
+```powershell
+Get-GPOZaurrLink -ADObject <ADObject[]> [-Limited] [-SkipDuplicates] [-GPOCache <IDictionary>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-AsHashTable] [-Summary] [<CommonParameters>]
 ```
 
 ### Filter
-```
-Get-GPOZaurrLink [-Filter <String>] [-SearchBase <String>] [-SearchScope <ADSearchScope>] [-Limited]
- [-SkipDuplicates] [-GPOCache <IDictionary>] [-Forest <String>] [-ExcludeDomains <String[]>]
- [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>] [-AsHashTable] [-Summary]
- [<CommonParameters>]
+```powershell
+Get-GPOZaurrLink [-Filter <string>] [-SearchBase <string>] [-SearchScope <ADSearchScope>] [-Limited] [-SkipDuplicates] [-GPOCache <IDictionary>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-AsHashTable] [-Summary] [<CommonParameters>]
 ```
 
 ### Site
-```
-Get-GPOZaurrLink [-Site <String[]>] [-GPOCache <IDictionary>] [-Forest <String>] [-ExcludeDomains <String[]>]
- [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>] [-AsHashTable] [-Summary]
- [<CommonParameters>]
+```powershell
+Get-GPOZaurrLink [-Site <string[]>] [-GPOCache <IDictionary>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-AsHashTable] [-Summary] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This function retrieves GPO links based on various parameters such as ADObject, Filter, Linked, Site, etc. It provides flexibility in searching for GPO links within Active Directory.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Get-GPOZaurrLink -ADObject $ADObject -Linked 'All'
 ```
 
-{{ Add example description here }}
+Description
+-----------
+Retrieves all linked GPOZaurr links for the specified Active Directory object(s).
+
+### EXAMPLE 2
+```powershell
+PS > Get-GPOZaurrLink -Filter "(objectClass -eq 'organizationalUnit')" -SearchBase 'CN=Configuration,DC=ad,DC=evotec,DC=xyz'
+```
+
+Description
+-----------
+Retrieves GPOZaurr links based on the specified filter and search base.
 
 ## PARAMETERS
 
 ### -ADObject
-{{ Fill ADObject Description }}
+Specifies the Active Directory object(s) to search for GPO links.
 
 ```yaml
 Type: ADObject[]
 Parameter Sets: ADObject
-Aliases:
+Aliases: 
+Possible values: 
 
 Required: True
-Position: Named
+Position: named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
+Accept pipeline input: True (ByValue, ByPropertyName)
+Accept wildcard characters: True
 ```
 
 ### -AsHashTable
@@ -75,29 +75,31 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Linked, ADObject, Filter, Site
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExcludeDomains
-{{ Fill ExcludeDomains Description }}
+Specifies the domains to exclude from the search.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Linked, ADObject, Filter, Site
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
@@ -105,166 +107,175 @@ Accept wildcard characters: False
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Linked, ADObject, Filter, Site
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Filter
-{{ Fill Filter Description }}
+Specifies the filter criteria to search for GPO links.
 
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases:
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Forest
-{{ Fill Forest Description }}
+Specifies the forest name for filtering GPO links.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Linked, ADObject, Filter, Site
 Aliases: ForestName
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -GPOCache
-{{ Fill GPOCache Description }}
+Specifies a cache for storing GPO information.
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Linked, ADObject, Filter, Site
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
-{{ Fill IncludeDomains Description }}
+Specifies the domains to include in the search.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: Linked, ADObject, Filter, Site
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Limited
-{{ Fill Limited Description }}
+Indicates whether to limit the search results.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linked, ADObject, Filter
-Aliases:
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Linked
-{{ Fill Linked Description }}
+Specifies the type of linked GPOs to retrieve. Valid values are 'All', 'Root', 'DomainControllers', 'Site', and 'OrganizationalUnit'.
 
 ```yaml
 Type: String[]
 Parameter Sets: Linked
-Aliases:
-Accepted values: All, Root, DomainControllers, Site, OrganizationalUnit
+Aliases: 
+Possible values: All, Root, DomainControllers, Site, OrganizationalUnit
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -SearchBase
-{{ Fill SearchBase Description }}
+Specifies the search base for filtering GPO links.
 
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases:
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -SearchScope
-{{ Fill SearchScope Description }}
+Specifies the search scope for filtering GPO links.
 
 ```yaml
 Type: ADSearchScope
 Parameter Sets: Filter
-Aliases:
-Accepted values: Base, OneLevel, Subtree
+Aliases: 
+Possible values: Base, OneLevel, Subtree
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Site
-{{ Fill Site Description }}
+Specifies the site(s) to search for GPO links.
 
 ```yaml
 Type: String[]
 Parameter Sets: Site
-Aliases:
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -SkipDuplicates
-{{ Fill SkipDuplicates Description }}
+Indicates whether to skip duplicate search results.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linked, ADObject, Filter
-Aliases:
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Summary
@@ -272,14 +283,15 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Linked, ADObject, Filter, Site
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -287,11 +299,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ActiveDirectory.Management.ADObject[]
+- `ADObject[]`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

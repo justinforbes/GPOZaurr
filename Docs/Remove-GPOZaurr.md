@@ -1,233 +1,214 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Remove-GPOZaurr
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes Group Policy Objects based on specified criteria.
 
 ## SYNTAX
-
-```
-Remove-GPOZaurr [[-ExcludeGroupPolicies] <ScriptBlock>] [-Type] <String[]> [-LimitProcessing <Int32>]
- [-Forest <String>] [-ExcludeDomains <String[]>] [-IncludeDomains <String[]>]
- [-ExtendedForestInformation <IDictionary>] [-GPOPath <String[]>] [-BackupPath <String>] [-BackupDated]
- [-RequireDays <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Remove-GPOZaurr [-Type] <string[]> [[-ExcludeGroupPolicies] <scriptblock>] [-LimitProcessing <int>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-GPOPath <string[]>] [-BackupPath <string>] [-BackupDated] [-RequireDays <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Remove-GPOZaurr function removes Group Policy Objects (GPOs) based on the specified criteria. It allows for filtering by various parameters such as GPO type, forest, domains, and more.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Remove-GPOZaurr -Type 'Empty' -Forest 'Contoso' -IncludeDomains 'Domain1', 'Domain2' -BackupPath 'C:\GPOBackups' -BackupDated -RequireDays 7
+Removes all empty GPOs from the 'Contoso' forest for 'Domain1' and 'Domain2', backs them up to 'C:\GPOBackups' with dated folders, and requires removal after 7 days.
 ```
 
-{{ Add example description here }}
+
+### EXAMPLE 2
+```powershell
+PS > Remove-GPOZaurr -Type 'Disabled' -Forest 'Fabrikam' -ExcludeDomains 'Domain3' -LimitProcessing 10
+Removes all disabled GPOs from the 'Fabrikam' forest excluding 'Domain3' and processes only the first 10 GPOs.
+```
+
 
 ## PARAMETERS
 
 ### -BackupDated
-{{ Fill BackupDated Description }}
+Indicates whether the backup should be dated.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -BackupPath
-{{ Fill BackupPath Description }}
+Specifies the path for backing up GPOs before removal.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExcludeDomains
-{{ Fill ExcludeDomains Description }}
+Specifies the domains to exclude from GPO removal.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExcludeGroupPolicies
-{{ Fill ExcludeGroupPolicies Description }}
+Specifies the Group Policies to exclude from removal.
 
 ```yaml
 Type: ScriptBlock
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
-{{ Fill ExtendedForestInformation Description }}
+Specifies additional information about the forest.
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Forest
-{{ Fill Forest Description }}
+Specifies the forest to target for GPO removal.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: ForestName
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -GPOPath
-{{ Fill GPOPath Description }}
+Specifies the path to the GPOs to be removed.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
-{{ Fill IncludeDomains Description }}
+Specifies the domains to include for GPO removal.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -LimitProcessing
-{{ Fill LimitProcessing Description }}
+Specifies the maximum number of GPOs to process before stopping.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: 0
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -RequireDays
-{{ Fill RequireDays Description }}
+Specifies the number of days before GPO removal is required.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: 0
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Type
-{{ Fill Type Description }}
+Specifies the type of GPOs to target for removal. Valid values are 'Empty', 'Unlinked', 'Disabled', 'NoApplyPermission'.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: Empty, Unlinked, Disabled, NoApplyPermission
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: Empty, Unlinked, Disabled, NoApplyPermission
 
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -235,11 +216,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

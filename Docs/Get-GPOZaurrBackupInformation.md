@@ -1,48 +1,56 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrBackupInformation
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves backup information from GPOZaurr manifest files.
 
 ## SYNTAX
-
-```
-Get-GPOZaurrBackupInformation [[-BackupFolder] <String[]>] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Get-GPOZaurrBackupInformation [[-BackupFolder] <string[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This function retrieves backup information from GPOZaurr manifest files located in the specified BackupFolder(s).
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Get-GPOZaurrBackupInformation -BackupFolder "C:\Backups"
 ```
 
-{{ Add example description here }}
+Description:
+Retrieves backup information from GPOZaurr manifest files located in the "C:\Backups" folder.
+
+### EXAMPLE 2
+```powershell
+PS > Get-GPOZaurrBackupInformation -BackupFolder "C:\Backups", "D:\Archives"
+```
+
+Description:
+Retrieves backup information from GPOZaurr manifest files located in both "C:\Backups" and "D:\Archives" folders.
 
 ## PARAMETERS
 
 ### -BackupFolder
-{{ Fill BackupFolder Description }}
+Specifies the path(s) to the folder containing GPOZaurr manifest files.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -50,11 +58,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

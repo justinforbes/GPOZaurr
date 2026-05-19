@@ -1,41 +1,4 @@
-[CmdletBinding()]
-param(
-    [switch]$SkipPublish
-)
-
-try {
-    Clear-Host
-} catch {
-    Write-Verbose "Skipping Clear-Host because the current host is non-interactive."
-}
-
-function Import-LocalPSPublishModule {
-    $candidateRoots = @()
-
-    if ($env:POWERFORGE_ROOT) {
-        $candidateRoots += $env:POWERFORGE_ROOT
-    }
-
-    $candidateRoots += [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..\PSPublishModule'))
-
-    foreach ($root in $candidateRoots | Select-Object -Unique) {
-        if ([string]::IsNullOrWhiteSpace($root)) {
-            continue
-        }
-
-        $manifestPath = Join-Path $root 'Module\PSPublishModule.psd1'
-        if (Test-Path -LiteralPath $manifestPath -PathType Leaf) {
-            Import-Module $manifestPath -Force -ErrorAction Stop
-            return
-        }
-    }
-
-    Import-Module PSPublishModule -Force -ErrorAction Stop
-}
-
-Import-LocalPSPublishModule
-
-Invoke-ModuleBuild -ModuleName 'GPOZaurr' {
+Build-Module -ModuleName 'GPOZaurr' {
     # Usual defaults as per standard module
     $Manifest = @{
         # Version number of this module.
@@ -63,17 +26,9 @@ Invoke-ModuleBuild -ModuleName 'GPOZaurr' {
     New-ConfigurationManifest @Manifest
 
     New-ConfigurationModule -Type RequiredModule -Name 'PSWriteColor', 'PSSharedGoods', 'ADEssentials' -Guid Auto -Version Latest
-    New-ConfigurationModule -Type RequiredModule -Name "PSWriteHTML" -Guid Auto -Version "1.27.0"
+    New-ConfigurationModule -Type RequiredModule -Name "PSWriteHTML" -Guid Auto -Version Latest
     #New-ConfigurationModule -Type ExternalModule -Name 'Microsoft.PowerShell.Utility', 'Microsoft.PowerShell.Management','Microsoft.PowerShell.Security'
     New-ConfigurationModule -Type ApprovedModule -Name 'PSSharedGoods', 'PSWriteColor', 'Connectimo', 'PSUnifi', 'PSWebToolbox', 'PSMyPassword', 'ADEssentials'
-
-    New-ConfigurationModule -Type ExternalModule -Name @(
-        "CimCmdlets"
-        'Microsoft.PowerShell.Management'
-        'Microsoft.PowerShell.Utility'
-        'Microsoft.PowerShell.Security'
-    )
-
     New-ConfigurationModuleSkip -IgnoreModuleName @(
         # this are builtin into PowerShell, so not critical
         'powershellget'
@@ -256,7 +211,7 @@ Invoke-ModuleBuild -ModuleName 'GPOZaurr' {
 
     # options for publishing to github/psgallery
     if (-not $SkipPublish) {
-        New-ConfigurationPublish -Type PowerShellGallery -FilePath 'C:\Support\Important\PowerShellGalleryAPI.txt' -Enabled:$true
-        New-ConfigurationPublish -Type GitHub -FilePath 'C:\Support\Important\GitHubAPI.txt' -UserName 'EvotecIT' -Enabled:$true
+        #New-ConfigurationPublish -Type PowerShellGallery -FilePath 'C:\Support\Important\PowerShellGalleryAPI.txt' -Enabled:$true
+        # New-ConfigurationPublish -Type GitHub -FilePath 'C:\Support\Important\GitHubAPI.txt' -UserName 'EvotecIT' -Enabled:$true -GenerateReleaseNotes
     }
 } -ExitCode

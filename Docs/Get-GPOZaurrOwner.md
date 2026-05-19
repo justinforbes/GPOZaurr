@@ -1,36 +1,27 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrOwner
-
 ## SYNOPSIS
 Gets owners of GPOs from Active Directory and SYSVOL
 
 ## SYNTAX
-
 ### Default (Default)
-```
-Get-GPOZaurrOwner [-IncludeSysvol] [-SkipBroken] [-Forest <String>] [-ExcludeDomains <String[]>]
- [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>]
- [-ADAdministrativeGroups <IDictionary>] [-ApprovedOwner <String[]>] [<CommonParameters>]
+```powershell
+Get-GPOZaurrOwner [-IncludeSysvol] [-SkipBroken] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-ADAdministrativeGroups <IDictionary>] [-ApprovedOwner <string[]>] [<CommonParameters>]
 ```
 
 ### GPOName
-```
-Get-GPOZaurrOwner [-GPOName <String>] [-IncludeSysvol] [-SkipBroken] [-Forest <String>]
- [-ExcludeDomains <String[]>] [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>]
- [-ADAdministrativeGroups <IDictionary>] [-ApprovedOwner <String[]>] [<CommonParameters>]
+```powershell
+Get-GPOZaurrOwner [-GPOName <string>] [-IncludeSysvol] [-SkipBroken] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-ADAdministrativeGroups <IDictionary>] [-ApprovedOwner <string[]>] [<CommonParameters>]
 ```
 
 ### GPOGUID
-```
-Get-GPOZaurrOwner [-GPOGuid <String>] [-IncludeSysvol] [-SkipBroken] [-Forest <String>]
- [-ExcludeDomains <String[]>] [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>]
- [-ADAdministrativeGroups <IDictionary>] [-ApprovedOwner <String[]>] [<CommonParameters>]
+```powershell
+Get-GPOZaurrOwner [-GPOGuid <string>] [-IncludeSysvol] [-SkipBroken] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-ADAdministrativeGroups <IDictionary>] [-ApprovedOwner <string[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,152 +30,33 @@ Gets owners of GPOs from Active Directory and SYSVOL
 ## EXAMPLES
 
 ### EXAMPLE 1
+```powershell
+PS > Get-GPOZaurrOwner -Verbose -IncludeSysvol
 ```
-Get-GPOZaurrOwner -Verbose -IncludeSysvol
-```
+
 
 ### EXAMPLE 2
+```powershell
+PS > Get-GPOZaurrOwner -Verbose -IncludeSysvol -SkipBroken
 ```
-Get-GPOZaurrOwner -Verbose -IncludeSysvol -SkipBroken
-```
+
 
 ## PARAMETERS
-
-### -GPOName
-Name of GPO.
-By default all GPOs are returned
-
-```yaml
-Type: String
-Parameter Sets: GPOName
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GPOGuid
-GUID of GPO.
-By default all GPOs are returned
-
-```yaml
-Type: String
-Parameter Sets: GPOGUID
-Aliases: GUID, GPOID
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeSysvol
-Includes Owner from SYSVOL as well
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipBroken
-Doesn't display GPOs that have no SYSVOL content (orphaned GPOs)
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Forest
-Target different Forest, by default current forest is used
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ForestName
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExcludeDomains
-Exclude domain from search, by default whole forest is scanned
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeDomains
-Include only specific domains, by default whole forest is scanned
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: Domain, Domains
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExtendedForestInformation
-Ability to provide Forest Information from another command to speed up processing
-
-```yaml
-Type: IDictionary
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ADAdministrativeGroups
 Ability to provide AD Administrative Groups from another command to speed up processing
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Default, GPOName, GPOGUID
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ApprovedOwner
@@ -192,14 +64,143 @@ Ability to provide different owner (non administrative that still is approved fo
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: Default, GPOName, GPOGUID
 Aliases: Exclusion, Exclusions
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
+```
+
+### -ExcludeDomains
+Exclude domain from search, by default whole forest is scanned
+
+```yaml
+Type: String[]
+Parameter Sets: Default, GPOName, GPOGUID
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -ExtendedForestInformation
+Ability to provide Forest Information from another command to speed up processing
+
+```yaml
+Type: IDictionary
+Parameter Sets: Default, GPOName, GPOGUID
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -Forest
+Target different Forest, by default current forest is used
+
+```yaml
+Type: String
+Parameter Sets: Default, GPOName, GPOGUID
+Aliases: ForestName
+Possible values: 
+
+Required: False
+Position: named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -GPOGuid
+GUID of GPO. By default all GPOs are returned
+
+```yaml
+Type: String
+Parameter Sets: GPOGUID
+Aliases: GUID, GPOID
+Possible values: 
+
+Required: False
+Position: named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -GPOName
+Name of GPO. By default all GPOs are returned
+
+```yaml
+Type: String
+Parameter Sets: GPOName
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -IncludeDomains
+Include only specific domains, by default whole forest is scanned
+
+```yaml
+Type: String[]
+Parameter Sets: Default, GPOName, GPOGUID
+Aliases: Domain, Domains
+Possible values: 
+
+Required: False
+Position: named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -IncludeSysvol
+Includes Owner from SYSVOL as well
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Default, GPOName, GPOGUID
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -SkipBroken
+Doesn't display GPOs that have no SYSVOL content (orphaned GPOs)
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Default, GPOName, GPOGUID
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -207,9 +208,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+- `None`
+
 ## OUTPUTS
 
-## NOTES
-General notes
+- `None`
 
 ## RELATED LINKS
+
+- None
+

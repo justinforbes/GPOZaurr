@@ -1,175 +1,180 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrPermissionSummary
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves a summary of Group Policy Object (GPO) permissions based on specified criteria.
 
 ## SYNTAX
-
-```
-Get-GPOZaurrPermissionSummary [[-Type] <String[]>] [[-PermitType] <String>]
- [[-IncludePermissionType] <String[]>] [[-ExcludePermissionType] <String[]>] [[-Forest] <String>]
- [[-ExcludeDomains] <String[]>] [[-IncludeDomains] <String[]>] [[-ExtendedForestInformation] <IDictionary>]
- [[-Separator] <String>] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Get-GPOZaurrPermissionSummary [[-Type] <string[]>] [[-PermitType] <string>] [[-IncludePermissionType] <string[]>] [[-ExcludePermissionType] <string[]>] [[-Forest] <string>] [[-ExcludeDomains] <string[]>] [[-IncludeDomains] <string[]>] [[-ExtendedForestInformation] <IDictionary>] [[-Separator] <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Retrieves a summary of GPO permissions based on the specified criteria, including filtering by permission types, permit types, and more.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Get-GPOZaurrPermissionSummary -Type 'All' -PermitType 'Allow' -IncludePermissionType 'GpoApply', 'GpoEdit' -ExcludePermissionType 'GpoOwner' -Forest 'ExampleForest' -IncludeDomains 'Domain1', 'Domain2' -ExtendedForestInformation $ForestInfo -Separator '|'
 ```
 
-{{ Add example description here }}
+
+### EXAMPLE 2
+```powershell
+PS > Get-GPOZaurrPermissionSummary -Type 'Administrative' -PermitType 'All' -IncludePermissionType 'GpoRead' -ExcludePermissionType 'GpoRootOwner' -Forest 'AnotherForest' -ExcludeDomains 'Domain3' -Separator ','
+```
+
 
 ## PARAMETERS
 
 ### -ExcludeDomains
-{{ Fill ExcludeDomains Description }}
+Specifies domains to exclude from the search.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 5
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExcludePermissionType
-{{ Fill ExcludePermissionType Description }}
+Specifies the permission types to exclude from the summary.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: GpoApply, GpoEdit, GpoCustom, GpoEditDeleteModifySecurity, GpoRead, GpoOwner, GpoRootCreate, GpoRootOwner
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: GpoApply, GpoEdit, GpoCustom, GpoEditDeleteModifySecurity, GpoRead, GpoOwner, GpoRootCreate, GpoRootOwner
 
 Required: False
 Position: 3
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
-{{ Fill ExtendedForestInformation Description }}
+Provides additional forest information to speed up processing.
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 7
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Forest
-{{ Fill Forest Description }}
+Specifies the target forest. By default, the current forest is used.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: ForestName
+Possible values: 
 
 Required: False
 Position: 4
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
-{{ Fill IncludeDomains Description }}
+Specifies domains to include in the search.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
 Position: 6
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludePermissionType
-{{ Fill IncludePermissionType Description }}
+Specifies the permission types to include in the summary.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: GpoApply, GpoEdit, GpoCustom, GpoEditDeleteModifySecurity, GpoRead, GpoOwner, GpoRootCreate, GpoRootOwner
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: GpoApply, GpoEdit, GpoCustom, GpoEditDeleteModifySecurity, GpoRead, GpoOwner, GpoRootCreate, GpoRootOwner
 
 Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -PermitType
-{{ Fill PermitType Description }}
+Specifies the type of permission to permit. Options include 'Allow', 'Deny', and 'All'.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Accepted values: Allow, Deny, All
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: Allow, Deny, All
 
 Required: False
 Position: 1
-Default value: None
+Default value: All
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Separator
-{{ Fill Separator Description }}
+Specifies the separator to use in the output.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 8
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Type
-{{ Fill Type Description }}
+Specifies the type of permissions to include. Options include 'AuthenticatedUsers', 'DomainComputers', 'Unknown', 'WellKnownAdministrative', 'NotWellKnown', 'NotWellKnownAdministrative', 'NotAdministrative', 'Administrative', and 'All'.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: AuthenticatedUsers, DomainComputers, Unknown, WellKnownAdministrative, NotWellKnown, NotWellKnownAdministrative, NotAdministrative, Administrative, All
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: AuthenticatedUsers, DomainComputers, Unknown, WellKnownAdministrative, NotWellKnown, NotWellKnownAdministrative, NotAdministrative, Administrative, All
 
 Required: False
 Position: 0
-Default value: None
+Default value: All
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -177,11 +182,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

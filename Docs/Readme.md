@@ -1,46 +1,44 @@
 ---
 Module Name: GPOZaurr
 Module Guid: f7d4c9e4-0298-4f51-ad77-e8e3febebbde
-Download Help Link: {{ Update Download Link }}
-Help Version: {{ Please enter version of help manually (X.X.X.X) format }}
+Download Help Link: https://github.com/EvotecIT/GPOZaurr
+Help Version: 1.1.10
 Locale: en-US
 ---
-
 # GPOZaurr Module
 ## Description
-{{ Fill in the Description }}
+Group Policy Eater is a PowerShell module that aims to gather information about Group Policies but also allows fixing issues that you may find in them.
 
 ## GPOZaurr Cmdlets
 ### [Add-GPOPermission](Add-GPOPermission.md)
-{{ Fill in the Synopsis }}
+{{ Fill in the Description }}
 
 ### [Add-GPOZaurrPermission](Add-GPOZaurrPermission.md)
-{{ Fill in the Synopsis }}
+{{ Fill in the Description }}
 
 ### [Backup-GPOZaurr](Backup-GPOZaurr.md)
 Provides Backup functionality to Group Policies
 
 ### [Clear-GPOZaurrSysvolDFSR](Clear-GPOZaurrSysvolDFSR.md)
-{{ Fill in the Synopsis }}
+Clears the ConflictAndDeleted folder in DFSR for specified GPOs.
 
 ### [ConvertFrom-CSExtension](ConvertFrom-CSExtension.md)
-{{ Fill in the Synopsis }}
+Converts Client-side Extension (CSE) GUIDs to their corresponding names.
 
 ### [Export-GPOZaurrContent](Export-GPOZaurrContent.md)
-Saves GPOs to XML or HTML files.
+Exports Group Policy Objects (GPOs) to XML or HTML files.
 
 ### [Find-CSExtension](Find-CSExtension.md)
-{{ Fill in the Synopsis }}
+This function retrieves Group Policy Client Side Extensions (CSEs) from a specified Windows computer.
 
 ### [Get-GPOZaurr](Get-GPOZaurr.md)
-Gets information about all Group Policies.
-Similar to what Get-GPO provides by default.
+Gets information about all Group Policies. Similar to what Get-GPO provides by default.
 
 ### [Get-GPOZaurrAD](Get-GPOZaurrAD.md)
-{{ Fill in the Synopsis }}
+Retrieves Group Policy Objects (GPOs) information from Active Directory.
 
 ### [Get-GPOZaurrBackupInformation](Get-GPOZaurrBackupInformation.md)
-{{ Fill in the Synopsis }}
+Retrieves backup information from GPOZaurr manifest files.
 
 ### [Get-GPOZaurrBroken](Get-GPOZaurrBroken.md)
 Detects broken or otherwise damaged Group Policies
@@ -49,37 +47,40 @@ Detects broken or otherwise damaged Group Policies
 Finds any GPO link that doesn't have a matching GPO (already removed GPO).
 
 ### [Get-GPOZaurrDictionary](Get-GPOZaurrDictionary.md)
-{{ Fill in the Synopsis }}
+Retrieves a dictionary of Group Policy Objects (GPOs) with their associated types and paths.
 
 ### [Get-GPOZaurrDuplicateObject](Get-GPOZaurrDuplicateObject.md)
-{{ Fill in the Synopsis }}
+Retrieves duplicate Group Policy Objects (GPOs) within a specified forest.
 
 ### [Get-GPOZaurrFiles](Get-GPOZaurrFiles.md)
-{{ Fill in the Synopsis }}
+Retrieves information about Group Policy Objects (GPOs) stored in SYSVOL and NETLOGON folders.
 
 ### [Get-GPOZaurrFilesPolicyDefinition](Get-GPOZaurrFilesPolicyDefinition.md)
-{{ Fill in the Synopsis }}
+Retrieves policy definitions for Group Policy Objects (GPOs) within specified domains.
 
 ### [Get-GPOZaurrFolders](Get-GPOZaurrFolders.md)
-{{ Fill in the Synopsis }}
+Retrieves information about GPO folders within specified domains.
 
 ### [Get-GPOZaurrInheritance](Get-GPOZaurrInheritance.md)
-Short description
+Retrieves inheritance information for Group Policy Objects (GPOs) within specified Organizational Units (OUs).
 
 ### [Get-GPOZaurrLegacyFiles](Get-GPOZaurrLegacyFiles.md)
-{{ Fill in the Synopsis }}
+Retrieves legacy Group Policy Object (GPO) files from the SYSVOL directory of specified domains within a forest.
 
 ### [Get-GPOZaurrLink](Get-GPOZaurrLink.md)
-{{ Fill in the Synopsis }}
+Retrieves Group Policy Object (GPO) links based on specified criteria.
 
 ### [Get-GPOZaurrLinkSummary](Get-GPOZaurrLinkSummary.md)
-{{ Fill in the Synopsis }}
+Retrieves a summary of GPO links based on specified criteria.
+
+### [Get-GPOZaurrMissingFiles](Get-GPOZaurrMissingFiles.md)
+Retrieves information about missing files in Group Policy Objects (GPOs) within a specified forest.
 
 ### [Get-GPOZaurrNetLogon](Get-GPOZaurrNetLogon.md)
-{{ Fill in the Synopsis }}
+Retrieves information about Group Policy Objects (GPO) stored in the Netlogon and SYSVOL directories.
 
 ### [Get-GPOZaurrOrganizationalUnit](Get-GPOZaurrOrganizationalUnit.md)
-{{ Fill in the Synopsis }}
+Retrieves information about Group Policy Objects (GPOs) linked to Organizational Units (OUs) within a specified forest.
 
 ### [Get-GPOZaurrOwner](Get-GPOZaurrOwner.md)
 Gets owners of GPOs from Active Directory and SYSVOL
@@ -88,22 +89,25 @@ Gets owners of GPOs from Active Directory and SYSVOL
 Tries to find CPassword in Group Policies or given path and translate it to readable value
 
 ### [Get-GPOZaurrPermission](Get-GPOZaurrPermission.md)
-{{ Fill in the Synopsis }}
+{{ Fill in the Description }}
 
 ### [Get-GPOZaurrPermissionAnalysis](Get-GPOZaurrPermissionAnalysis.md)
-{{ Fill in the Synopsis }}
+Analyzes permissions for Group Policy Objects (GPOs) and administrative groups.
 
 ### [Get-GPOZaurrPermissionConsistency](Get-GPOZaurrPermissionConsistency.md)
-{{ Fill in the Synopsis }}
+Retrieves information about Group Policy Objects (GPOs) and checks permission consistency across domains.
 
 ### [Get-GPOZaurrPermissionIssue](Get-GPOZaurrPermissionIssue.md)
 Detects Group Policy missing Authenticated Users permission while not having higher permissions.
 
 ### [Get-GPOZaurrPermissionRoot](Get-GPOZaurrPermissionRoot.md)
-{{ Fill in the Synopsis }}
+Retrieves the root permissions of Group Policy Objects (GPOs) based on specified criteria.
 
 ### [Get-GPOZaurrPermissionSummary](Get-GPOZaurrPermissionSummary.md)
-{{ Fill in the Synopsis }}
+Retrieves a summary of Group Policy Object (GPO) permissions based on specified criteria.
+
+### [Get-GPOZaurrRedirect](Get-GPOZaurrRedirect.md)
+Command to detect if GPOs have correct path in SYSVOL, or someone changed it manually.
 
 ### [Get-GPOZaurrSysvolDFSR](Get-GPOZaurrSysvolDFSR.md)
 Gets DFSR information from the SYSVOL DFSR
@@ -118,46 +122,46 @@ Get Group Policy WMI filter
 Single cmdlet that provides 360 degree overview of Group Policies in Active Directory Forest.
 
 ### [Invoke-GPOZaurrContent](Invoke-GPOZaurrContent.md)
-{{ Fill in the Synopsis }}
+Invokes GPOZaurrContent function to retrieve Group Policy Objects information.
 
 ### [Invoke-GPOZaurrPermission](Invoke-GPOZaurrPermission.md)
-{{ Fill in the Synopsis }}
+{{ Fill in the Description }}
 
 ### [Invoke-GPOZaurrSupport](Invoke-GPOZaurrSupport.md)
-{{ Fill in the Synopsis }}
+Invokes GPOZaurrSupport function to retrieve Group Policy information.
 
 ### [New-GPOZaurrWMI](New-GPOZaurrWMI.md)
-{{ Fill in the Synopsis }}
+Creates a new WMI filter based on a WMI filter query.
 
 ### [Optimize-GPOZaurr](Optimize-GPOZaurr.md)
 Enables or disables user/computer section of group policy based on it's content.
 
 ### [Remove-GPOPermission](Remove-GPOPermission.md)
-{{ Fill in the Synopsis }}
+{{ Fill in the Description }}
 
 ### [Remove-GPOZaurr](Remove-GPOZaurr.md)
-{{ Fill in the Synopsis }}
+Removes Group Policy Objects based on specified criteria.
 
 ### [Remove-GPOZaurrBroken](Remove-GPOZaurrBroken.md)
 Finds and removes broken Group Policies from SYSVOL or AD or both.
 
 ### [Remove-GPOZaurrDuplicateObject](Remove-GPOZaurrDuplicateObject.md)
-{{ Fill in the Synopsis }}
+Removes duplicate Group Policy Objects (GPOs) identified by the Get-GPOZaurrDuplicateObject function.
 
 ### [Remove-GPOZaurrFolders](Remove-GPOZaurrFolders.md)
-{{ Fill in the Synopsis }}
+Removes specified GPOZaurr folders and backs them up to a specified path.
 
 ### [Remove-GPOZaurrLegacyFiles](Remove-GPOZaurrLegacyFiles.md)
-{{ Fill in the Synopsis }}
+Removes legacy Group Policy Objects (GPO) files from specified domains.
 
 ### [Remove-GPOZaurrLinkEmptyOU](Remove-GPOZaurrLinkEmptyOU.md)
-{{ Fill in the Synopsis }}
+Removes Group Policy Object (GPO) links from empty Organizational Units (OUs) in a specified forest.
 
 ### [Remove-GPOZaurrPermission](Remove-GPOZaurrPermission.md)
-{{ Fill in the Synopsis }}
+{{ Fill in the Description }}
 
 ### [Remove-GPOZaurrWMI](Remove-GPOZaurrWMI.md)
-{{ Fill in the Synopsis }}
+Removes Group Policy WMI filters based on specified criteria.
 
 ### [Repair-GPOZaurrBrokenLink](Repair-GPOZaurrBrokenLink.md)
 Removes any link to GPO that no longer exists.
@@ -166,28 +170,26 @@ Removes any link to GPO that no longer exists.
 Sets new owner to each file in NetLogon share.
 
 ### [Repair-GPOZaurrPermission](Repair-GPOZaurrPermission.md)
-{{ Fill in the Synopsis }}
+Repairs permissions for Group Policy Objects (GPOs) based on specified criteria.
 
 ### [Repair-GPOZaurrPermissionConsistency](Repair-GPOZaurrPermissionConsistency.md)
-{{ Fill in the Synopsis }}
+Repairs permission consistency for Group Policy Objects (GPOs) in a specified domain or forest.
 
 ### [Restore-GPOZaurr](Restore-GPOZaurr.md)
-{{ Fill in the Synopsis }}
+Restores Group Policy Objects (GPOs) from a specified backup folder.
 
 ### [Save-GPOZaurrFiles](Save-GPOZaurrFiles.md)
 Exports GPO XML data to files and saves it to a given path
 
 ### [Set-GPOOwner](Set-GPOOwner.md)
-Used within Invoke-GPOZaurrPermission only.
-Set new group policy owner.
+Used within Invoke-GPOZaurrPermission only. Set new group policy owner.
 
 ### [Set-GPOZaurrOwner](Set-GPOZaurrOwner.md)
 Sets GPO Owner to Domain Admins or other choosen account
 
 ### [Set-GPOZaurrStatus](Set-GPOZaurrStatus.md)
-Enables or disables user/computer section of Group Policy.
+{{ Fill in the Description }}
 
 ### [Skip-GroupPolicy](Skip-GroupPolicy.md)
-Used within ScriptBlocks only.
-Allows to exclude Group Policy from being affected by fixes
+Used within ScriptBlocks only. Allows to exclude Group Policy from being affected by fixes
 

@@ -1,21 +1,17 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrBroken
-
 ## SYNOPSIS
 Detects broken or otherwise damaged Group Policies
 
 ## SYNTAX
-
-```
-Get-GPOZaurrBroken [[-Forest] <String>] [[-ExcludeDomains] <String[]>] [[-ExcludeDomainControllers] <String[]>]
- [[-IncludeDomains] <String[]>] [[-IncludeDomainControllers] <String[]>] [-SkipRODC]
- [[-ExtendedForestInformation] <IDictionary>] [-VerifyDomainControllers] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Get-GPOZaurrBroken [[-Forest] <string>] [[-ExcludeDomains] <string[]>] [[-ExcludeDomainControllers] <string[]>] [[-IncludeDomains] <string[]>] [[-IncludeDomainControllers] <string[]>] [[-ExtendedForestInformation] <IDictionary>] [-SkipRODC] [-VerifyDomainControllers] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,25 +26,27 @@ It provides few statuses:
 ## EXAMPLES
 
 ### EXAMPLE 1
+```powershell
+PS > Get-GPOZaurrBroken -Verbose | Format-Table
 ```
-Get-GPOZaurrBroken -Verbose | Format-Table
-```
+
 
 ## PARAMETERS
 
-### -Forest
-Target different Forest, by default current forest is used
+### -ExcludeDomainControllers
+Exclude specific domain controllers, by default there are no exclusions, as long as VerifyDomainControllers switch is enabled. Otherwise this parameter is ignored.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ForestName
+Type: String[]
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExcludeDomains
@@ -56,77 +54,15 @@ Exclude domain from search, by default whole forest is scanned
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExcludeDomainControllers
-Exclude specific domain controllers, by default there are no exclusions, as long as VerifyDomainControllers switch is enabled.
-Otherwise this parameter is ignored.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeDomains
-Include only specific domains, by default whole forest is scanned
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: Domain, Domains
-
-Required: False
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeDomainControllers
-Include only specific domain controllers, by default all domain controllers are included, as long as VerifyDomainControllers switch is enabled.
-Otherwise this parameter is ignored.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: DomainControllers
-
-Required: False
-Position: 5
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipRODC
-Skip Read-Only Domain Controllers.
-By default all domain controllers are included.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
@@ -134,14 +70,79 @@ Ability to provide Forest Information from another command to speed up processin
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: 6
+Position: 5
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
+```
+
+### -Forest
+Target different Forest, by default current forest is used
+
+```yaml
+Type: String
+Parameter Sets: __AllParameterSets
+Aliases: ForestName
+Possible values: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -IncludeDomainControllers
+Include only specific domain controllers, by default all domain controllers are included, as long as VerifyDomainControllers switch is enabled. Otherwise this parameter is ignored.
+
+```yaml
+Type: String[]
+Parameter Sets: __AllParameterSets
+Aliases: DomainControllers
+Possible values: 
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -IncludeDomains
+Include only specific domains, by default whole forest is scanned
+
+```yaml
+Type: String[]
+Parameter Sets: __AllParameterSets
+Aliases: Domain, Domains
+Possible values: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -SkipRODC
+Skip Read-Only Domain Controllers. By default all domain controllers are included.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
 ```
 
 ### -VerifyDomainControllers
@@ -149,14 +150,15 @@ Forces cmdlet to check GPO Existance on Domain Controllers rather then per domai
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -164,9 +166,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+- `None`
+
 ## OUTPUTS
 
-## NOTES
-General notes
+- `None`
 
 ## RELATED LINKS
+
+- None
+

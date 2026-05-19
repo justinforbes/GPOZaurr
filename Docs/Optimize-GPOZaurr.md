@@ -1,36 +1,27 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Optimize-GPOZaurr
-
 ## SYNOPSIS
 Enables or disables user/computer section of group policy based on it's content.
 
 ## SYNTAX
-
 ### GPOName (Default)
-```
-Optimize-GPOZaurr [[-ExcludeGroupPolicies] <ScriptBlock>] -GPOName <String> [-LimitProcessing <Int32>]
- [-Forest <String>] [-ExcludeDomains <String[]>] [-IncludeDomains <String[]>]
- [-ExtendedForestInformation <IDictionary>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Optimize-GPOZaurr [[-ExcludeGroupPolicies] <scriptblock>] -GPOName <string> [-LimitProcessing <int>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GPOGUID
-```
-Optimize-GPOZaurr [[-ExcludeGroupPolicies] <ScriptBlock>] -GPOGuid <String> [-LimitProcessing <Int32>]
- [-Forest <String>] [-ExcludeDomains <String[]>] [-IncludeDomains <String[]>]
- [-ExtendedForestInformation <IDictionary>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Optimize-GPOZaurr [[-ExcludeGroupPolicies] <scriptblock>] -GPOGuid <string> [-LimitProcessing <int>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### All
-```
-Optimize-GPOZaurr [[-ExcludeGroupPolicies] <ScriptBlock>] [-All] [-LimitProcessing <Int32>] [-Forest <String>]
- [-ExcludeDomains <String[]>] [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+```powershell
+Optimize-GPOZaurr [[-ExcludeGroupPolicies] <scriptblock>] -All [-LimitProcessing <int>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,49 +30,100 @@ Enables or disables user/computer section of group policy based on it's content.
 ## EXAMPLES
 
 ### EXAMPLE 1
+```powershell
+PS > Optimize-GPOZaurr -All -WhatIf -Verbose -LimitProcessing 2
 ```
-Optimize-GPOZaurr -All -WhatIf -Verbose -LimitProcessing 2
-```
+
 
 ### EXAMPLE 2
-```
-Optimize-GPOZaurr -All -WhatIf -Verbose -LimitProcessing 2 {
-```
-
-Skip-GroupPolicy -Name 'TEST | Drive Mapping 1'
+```powershell
+PS > Optimize-GPOZaurr -All -WhatIf -Verbose -LimitProcessing 2 {
+    Skip-GroupPolicy -Name 'TEST | Drive Mapping 1'
     Skip-GroupPolicy -Name 'TEST | Drive Mapping 2'
 }
+```
+
 
 ## PARAMETERS
+
+### -All
+{{ Fill All Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: All
+Aliases: 
+Possible values: 
+
+Required: True
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -ExcludeDomains
+Exclude domain from search, by default whole forest is scanned
+
+```yaml
+Type: String[]
+Parameter Sets: GPOName, GPOGUID, All
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
 
 ### -ExcludeGroupPolicies
 Provide a list of group policies to skip using Skip-GroupPolicy cmdlet
 
 ```yaml
 Type: ScriptBlock
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: GPOName, GPOGUID, All
+Aliases: 
+Possible values: 
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
-### -GPOName
-{{ Fill GPOName Description }}
+### -ExtendedForestInformation
+Ability to provide Forest Information from another command to speed up processing
+
+```yaml
+Type: IDictionary
+Parameter Sets: GPOName, GPOGUID, All
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -Forest
+Target different Forest, by default current forest is used
 
 ```yaml
 Type: String
-Parameter Sets: GPOName
-Aliases: Name, DisplayName
+Parameter Sets: GPOName, GPOGUID, All
+Aliases: ForestName
+Possible values: 
 
-Required: True
-Position: Named
+Required: False
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -GPOGuid
@@ -91,73 +133,29 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: GPOGUID
 Aliases: GUID, GPOID
+Possible values: 
 
 Required: True
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
-### -All
-{{ Fill All Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: All
-Aliases:
-
-Required: True
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LimitProcessing
-Allows to specify maximum number of items that will be fixed in a single run.
-It doesn't affect amount of GPOs processed
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: 0
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Forest
-Target different Forest, by default current forest is used
+### -GPOName
+{{ Fill GPOName Description }}
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: ForestName
+Parameter Sets: GPOName
+Aliases: Name, DisplayName
+Possible values: 
 
-Required: False
-Position: Named
+Required: True
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExcludeDomains
-Exclude domain from search, by default whole forest is scanned
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
@@ -165,60 +163,31 @@ Include only specific domains, by default whole forest is scanned
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: GPOName, GPOGUID, All
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
-### -ExtendedForestInformation
-Ability to provide Forest Information from another command to speed up processing
+### -LimitProcessing
+Allows to specify maximum number of items that will be fixed in a single run. It doesn't affect amount of GPOs processed
 
 ```yaml
-Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Type: Int32
+Parameter Sets: GPOName, GPOGUID, All
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: 0
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -226,9 +195,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+- `None`
+
 ## OUTPUTS
 
-## NOTES
-General notes
+- `None`
 
 ## RELATED LINKS
+
+- None
+

@@ -28,11 +28,11 @@
     Runs the function online to retrieve the latest Group Policy information.
 
     .EXAMPLE
-    Invoke-GPOZaurrSupport -Type HTML -ComputerName "RemoteComputer" -UserName "Admin" -Path "C:\Temp\GPOReport.html"
+    Invoke-GPOZaurrSupport -Type HTML -ComputerName "RemoteComputer" -UserName "Admin" -Path (Join-Path $env:TEMP 'GPOReport.html')
     Retrieves Group Policy information in HTML format from a remote computer and saves it to a specified path.
 
     .EXAMPLE
-    Invoke-GPOZaurrSupport -Type XML -Path "C:\Temp\GPOReport.xml" -Online
+    Invoke-GPOZaurrSupport -Type XML -Path (Join-Path $env:TEMP 'GPOReport.xml') -Online
     Retrieves the latest Group Policy information in XML format and saves it to a specified path.
 
     #>

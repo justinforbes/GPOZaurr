@@ -1,174 +1,175 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrInheritance
-
 ## SYNOPSIS
-Short description
+Retrieves inheritance information for Group Policy Objects (GPOs) within specified Organizational Units (OUs).
 
 ## SYNTAX
-
-```
-Get-GPOZaurrInheritance [-IncludeBlockedObjects] [-OnlyBlockedInheritance] [-IncludeExcludedObjects]
- [-IncludeGroupPoliciesForBlockedObjects] [[-Exclusions] <String[]>] [[-Forest] <String>]
- [[-ExcludeDomains] <String[]>] [[-IncludeDomains] <String[]>] [[-ExtendedForestInformation] <IDictionary>]
- [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Get-GPOZaurrInheritance [[-Exclusions] <string[]>] [[-Forest] <string>] [[-ExcludeDomains] <string[]>] [[-IncludeDomains] <string[]>] [[-ExtendedForestInformation] <IDictionary>] [-IncludeBlockedObjects] [-OnlyBlockedInheritance] [-IncludeExcludedObjects] [-IncludeGroupPoliciesForBlockedObjects] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Long description
+This function retrieves and displays inheritance information for GPOs within specified OUs. It provides details on blocked inheritance, excluded objects, and group policies associated with blocked objects.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
-$Objects = Get-GPOZaurrInheritance -IncludeBlockedObjects -IncludeExcludedObjects -OnlyBlockedInheritance -Exclusions $ExcludedOU
+```powershell
+PS > $Objects = Get-GPOZaurrInheritance -IncludeBlockedObjects -IncludeExcludedObjects -OnlyBlockedInheritance -Exclusions $ExcludedOU
+$Objects | Format-Table
 ```
 
-$Objects | Format-Table
 
 ## PARAMETERS
 
-### -IncludeBlockedObjects
-Include OU's with blocked inheritance.
-Default disabled
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OnlyBlockedInheritance
-Show only OU's with blocked inheritance
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeExcludedObjects
-Show excluded objets.
-Default disabled
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeGroupPoliciesForBlockedObjects
-{{ Fill IncludeGroupPoliciesForBlockedObjects Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Exclusions
-Provide exclusions for OU's approved by IT.
-You can provide OU by canonical name or distinguishedName
+### -ExcludeDomains
+Specifies the domain to exclude from the search. By default, the entire forest is scanned.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Forest
-Target different Forest, by default current forest is used
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ForestName
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
-### -ExcludeDomains
-Exclude domain from search, by default whole forest is scanned
+### -Exclusions
+Specifies the OUs approved by IT to be excluded. You can provide OUs by canonical name or distinguishedName.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: 3
+Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
-### -IncludeDomains
-Include only specific domains, by default whole forest is scanned
+### -ExtendedForestInformation
+Allows providing Forest Information from another command to speed up processing.
 
 ```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: Domain, Domains
+Type: IDictionary
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 4
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
-### -ExtendedForestInformation
-Ability to provide Forest Information from another command to speed up processing
+### -Forest
+Specifies the target forest. By default, the current forest is used.
 
 ```yaml
-Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Type: String
+Parameter Sets: __AllParameterSets
+Aliases: ForestName
+Possible values: 
 
 Required: False
-Position: 5
+Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
+```
+
+### -IncludeBlockedObjects
+Specifies whether to include OUs with blocked inheritance. By default, this is disabled.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -IncludeDomains
+Specifies specific domains to include. By default, the entire forest is scanned.
+
+```yaml
+Type: String[]
+Parameter Sets: __AllParameterSets
+Aliases: Domain, Domains
+Possible values: 
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -IncludeExcludedObjects
+Specifies whether to show excluded objects. By default, this is disabled.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -IncludeGroupPoliciesForBlockedObjects
+Specifies whether to include Group Policies for blocked objects. By default, this is disabled.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -OnlyBlockedInheritance
+Specifies whether to show only OUs with blocked inheritance.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -176,9 +177,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+- `None`
+
 ## OUTPUTS
 
-## NOTES
-General notes
+- `None`
 
 ## RELATED LINKS
+
+- None
+

@@ -1,63 +1,63 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Export-GPOZaurrContent
-
 ## SYNOPSIS
-Saves GPOs to XML or HTML files.
+Exports Group Policy Objects (GPOs) to XML or HTML files.
 
 ## SYNTAX
-
-```
-Export-GPOZaurrContent [-FolderOutput] <String> [[-ReportType] <String>] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Export-GPOZaurrContent [-FolderOutput] <string> [[-ReportType] <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Saves GPOs to XML or HTML files.
+This function exports GPOs to either XML or HTML files based on the specified parameters.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
+```powershell
+PS > Export-GPOZaurrContent -FolderOutput "C:\ExportedGPOs" -ReportType HTML
+Exports all GPOs to HTML format and saves them in the "C:\ExportedGPOs" folder.
 ```
-An example
-```
+
 
 ## PARAMETERS
 
 ### -FolderOutput
-The folder where the GPOs will be saved.
+Specifies the folder path where the exported GPO files will be saved.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: Path
+Possible values: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ReportType
-The type of report to generate.
-Valid values are XML or HTML.
-Default is XML.
+Specifies the type of report to generate. Valid values are XML or HTML. The default value is XML.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: XML, HTML
 
 Required: False
-Position: 2
+Position: 1
 Default value: XML
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -65,9 +65,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+- `None`
+
 ## OUTPUTS
 
-## NOTES
-General notes
+- `None`
 
 ## RELATED LINKS
+
+- None
+

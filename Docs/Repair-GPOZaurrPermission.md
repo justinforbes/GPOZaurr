@@ -1,157 +1,127 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Repair-GPOZaurrPermission
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Repairs permissions for Group Policy Objects (GPOs) based on specified criteria.
 
 ## SYNTAX
-
-```
-Repair-GPOZaurrPermission [-Type] <String[]> [[-Forest] <String>] [[-ExcludeDomains] <String[]>]
- [[-IncludeDomains] <String[]>] [[-ExtendedForestInformation] <IDictionary>] [[-LimitProcessing] <Int32>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Repair-GPOZaurrPermission [-Type] <string[]> [[-Forest] <string>] [[-ExcludeDomains] <string[]>] [[-IncludeDomains] <string[]>] [[-ExtendedForestInformation] <IDictionary>] [[-LimitProcessing] <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Repair-GPOZaurrPermission function repairs permissions for GPOs based on the specified criteria. It analyzes the permissions of GPOs and adds necessary permissions if they are missing.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Repair-GPOZaurrPermission -Type 'All' -Forest 'ContosoForest' -IncludeDomains @('Domain1', 'Domain2') -ExcludeDomains @('Domain3') -ExtendedForestInformation $info -LimitProcessing 100
+Repairs permissions for all types of users in the 'ContosoForest' forest, including only 'Domain1' and 'Domain2' while excluding 'Domain3', with extended forest information and processing a maximum of 100 GPOs.
 ```
 
-{{ Add example description here }}
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExcludeDomains
-{{ Fill ExcludeDomains Description }}
+Specifies an array of domains to exclude from the analysis.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
-{{ Fill ExtendedForestInformation Description }}
+Specifies additional information about the forest.
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 4
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Forest
-{{ Fill Forest Description }}
+Specifies the forest name to analyze GPO permissions.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: ForestName
+Possible values: 
 
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
-{{ Fill IncludeDomains Description }}
+Specifies an array of domains to include in the analysis.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
 Position: 3
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -LimitProcessing
-{{ Fill LimitProcessing Description }}
+Specifies the maximum number of GPOs to process.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 5
-Default value: None
+Default value: 2147483647
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Type
-{{ Fill Type Description }}
+Specifies the type of permissions to repair. Valid values are 'AuthenticatedUsers', 'Unknown', 'System', 'Administrative', and 'All'.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: AuthenticatedUsers, Unknown, System, Administrative, All
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: AuthenticatedUsers, Unknown, System, Administrative, All
 
 Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -159,11 +129,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

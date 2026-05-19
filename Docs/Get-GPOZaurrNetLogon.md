@@ -1,137 +1,151 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrNetLogon
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves information about Group Policy Objects (GPO) stored in the Netlogon and SYSVOL directories.
 
 ## SYNTAX
-
 ### Default (Default)
-```
-Get-GPOZaurrNetLogon [-Forest <String>] [-ExcludeDomains <String[]>] [-IncludeDomains <String[]>]
- [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
+```powershell
+Get-GPOZaurrNetLogon [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
 ```
 
 ### OwnerOnly
-```
-Get-GPOZaurrNetLogon [-OwnerOnly] [-Forest <String>] [-ExcludeDomains <String[]>] [-IncludeDomains <String[]>]
- [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
+```powershell
+Get-GPOZaurrNetLogon [-OwnerOnly] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
 ```
 
 ### SkipOwner
-```
-Get-GPOZaurrNetLogon [-SkipOwner] [-Forest <String>] [-ExcludeDomains <String[]>] [-IncludeDomains <String[]>]
- [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
+```powershell
+Get-GPOZaurrNetLogon [-SkipOwner] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Get-GPOZaurrNetLogon function retrieves details about GPOs stored in the Netlogon and SYSVOL directories of specified domains within a forest. It provides information about file ownership, status, domain, extension, creation time, and more.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Get-GPOZaurrNetLogon -Forest "contoso.com" -IncludeDomains "domain1", "domain2"
+Retrieves GPO information for the specified forest and domains.
 ```
 
-{{ Add example description here }}
+
+### EXAMPLE 2
+```powershell
+PS > Get-GPOZaurrNetLogon -OwnerOnly
+Retrieves GPO information only for GPOs with identified owners.
+```
+
+
+### EXAMPLE 3
+```powershell
+PS > Get-GPOZaurrNetLogon -SkipOwner
+Retrieves GPO information while skipping the owner check.
+```
+
 
 ## PARAMETERS
 
 ### -ExcludeDomains
-{{ Fill ExcludeDomains Description }}
+Specifies an array of domains to exclude from GPO retrieval.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Default, OwnerOnly, SkipOwner
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
-{{ Fill ExtendedForestInformation Description }}
+Specifies additional forest information to include in the output.
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Default, OwnerOnly, SkipOwner
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Forest
-{{ Fill Forest Description }}
+Specifies the forest name to retrieve GPO information from.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Default, OwnerOnly, SkipOwner
 Aliases: ForestName
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
-{{ Fill IncludeDomains Description }}
+Specifies an array of domains to include in GPO retrieval.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: Default, OwnerOnly, SkipOwner
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -OwnerOnly
-{{ Fill OwnerOnly Description }}
+Specifies whether to include only GPOs with identified owners.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: OwnerOnly
-Aliases:
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -SkipOwner
-{{ Fill SkipOwner Description }}
+Specifies whether to skip checking the owner of GPOs.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SkipOwner
-Aliases:
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -139,11 +153,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

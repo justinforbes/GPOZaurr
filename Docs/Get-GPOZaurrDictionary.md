@@ -1,48 +1,54 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrDictionary
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves a dictionary of Group Policy Objects (GPOs) with their associated types and paths.
 
 ## SYNTAX
-
-```
-Get-GPOZaurrDictionary [[-Splitter] <String>] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Get-GPOZaurrDictionary [[-Splitter] <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This function retrieves a dictionary of Group Policy Objects (GPOs) along with their associated types and paths. It iterates through the GPOs stored in the $Script:GPODitionary variable and constructs a custom object for each GPO containing its name, types, and path.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Get-GPOZaurrDictionary
+Retrieves the dictionary of GPOs with their types and paths using the default newline delimiter.
 ```
 
-{{ Add example description here }}
+
+### EXAMPLE 2
+```powershell
+PS > Get-GPOZaurrDictionary -Splitter ","
+Retrieves the dictionary of GPOs with their types and paths using a comma as the delimiter.
+```
+
 
 ## PARAMETERS
 
 ### -Splitter
-{{ Fill Splitter Description }}
+Specifies the delimiter used to separate multiple types or paths. Default value is [System.Environment]::NewLine.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 0
-Default value: None
+Default value: [System.Environment]::NewLine
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -50,11 +56,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

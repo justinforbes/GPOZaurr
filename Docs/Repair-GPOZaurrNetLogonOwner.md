@@ -1,21 +1,17 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Repair-GPOZaurrNetLogonOwner
-
 ## SYNOPSIS
 Sets new owner to each file in NetLogon share.
 
 ## SYNTAX
-
-```
-Repair-GPOZaurrNetLogonOwner [[-Forest] <String>] [[-ExcludeDomains] <String[]>] [[-IncludeDomains] <String[]>]
- [[-ExtendedForestInformation] <IDictionary>] [[-Principal] <String>] [[-LimitProcessing] <Int32>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Repair-GPOZaurrNetLogonOwner [[-Forest] <string>] [[-ExcludeDomains] <string[]>] [[-IncludeDomains] <string[]>] [[-ExtendedForestInformation] <IDictionary>] [[-Principal] <string>] [[-LimitProcessing] <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,55 +20,27 @@ Sets new owner to each file in NetLogon share.
 ## EXAMPLES
 
 ### EXAMPLE 1
+```powershell
+PS > Repair-GPOZaurrNetLogonOwner -WhatIf -Verbose -IncludeDomains ad.evotec.pl
 ```
-Repair-GPOZaurrNetLogonOwner -WhatIf -Verbose -IncludeDomains ad.evotec.pl
-```
+
 
 ## PARAMETERS
-
-### -Forest
-Target different Forest, by default current forest is used
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: ForestName
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ExcludeDomains
 Exclude domain from search, by default whole forest is scanned
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeDomains
-Include only specific domains, by default whole forest is scanned
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases: Domain, Domains
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
@@ -80,77 +48,79 @@ Ability to provide Forest Information from another command to speed up processin
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: 4
+Position: 3
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
-### -Principal
-Provide named owner.
-If not provided default S-1-5-32-544 is used.
+### -Forest
+Target different Forest, by default current forest is used
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: ForestName
+Possible values: 
 
 Required: False
-Position: 5
-Default value: S-1-5-32-544
+Position: 0
+Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
+```
+
+### -IncludeDomains
+Include only specific domains, by default whole forest is scanned
+
+```yaml
+Type: String[]
+Parameter Sets: __AllParameterSets
+Aliases: Domain, Domains
+Possible values: 
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
 ```
 
 ### -LimitProcessing
-Allows to specify maximum number of items that will be fixed in a single run.
-It doesn't affect amount of GPOs processed
+Allows to specify maximum number of items that will be fixed in a single run. It doesn't affect amount of GPOs processed
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: 6
+Position: 5
 Default value: 2147483647
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -Principal
+Provide named owner. If not provided default S-1-5-32-544 is used.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
+Type: String
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: 4
+Default value: S-1-5-32-544
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -158,9 +128,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+- `None`
+
 ## OUTPUTS
 
-## NOTES
-General notes
+- `None`
 
 ## RELATED LINKS
+
+- None
+

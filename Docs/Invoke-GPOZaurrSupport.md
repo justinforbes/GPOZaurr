@@ -1,140 +1,150 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Invoke-GPOZaurrSupport
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Invokes GPOZaurrSupport function to retrieve Group Policy information.
 
 ## SYNTAX
-
-```
-Invoke-GPOZaurrSupport [[-Type] <String>] [[-ComputerName] <String>] [[-UserName] <String>] [[-Path] <String>]
- [[-Splitter] <String>] [-PreventShow] [-Online] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Invoke-GPOZaurrSupport [[-Type] <string>] [[-ComputerName] <string>] [[-UserName] <string>] [[-Path] <string>] [[-Splitter] <string>] [-PreventShow] [-Online] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This function retrieves Group Policy information using either HTML, XML, or Object format. It can be run locally or on a remote computer.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Invoke-GPOZaurrSupport -Type HTML -ComputerName "RemoteComputer" -UserName "Admin" -Path (Join-Path $env:TEMP 'GPOReport.html')
+Retrieves Group Policy information in HTML format from a remote computer and saves it to a specified path.
 ```
 
-{{ Add example description here }}
+
+### EXAMPLE 2
+```powershell
+PS > Invoke-GPOZaurrSupport -Type XML -Path (Join-Path $env:TEMP 'GPOReport.xml') -Online
+Retrieves the latest Group Policy information in XML format and saves it to a specified path.
+```
+
 
 ## PARAMETERS
 
 ### -ComputerName
-{{ Fill ComputerName Description }}
+Specifies the name of the remote computer to retrieve Group Policy information from.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: Server
+Possible values: 
 
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Online
-{{ Fill Online Description }}
+Runs the function online to retrieve the latest Group Policy information.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Path
-{{ Fill Path Description }}
+Specifies the path to save the output file. If not provided, a temporary file will be created.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 3
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -PreventShow
-{{ Fill PreventShow Description }}
+Prevents displaying the output in the console.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Splitter
-{{ Fill Splitter Description }}
+Specifies the delimiter for splitting output data. Default is a new line.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 4
-Default value: None
+Default value: [System.Environment]::NewLine
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Type
-{{ Fill Type Description }}
+Specifies the type of output format. Valid values are 'NativeHTML', 'HTML', 'XML', or 'Object'. Default is 'HTML'.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Accepted values: NativeHTML, HTML, XML, Object
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: NativeHTML, HTML, XML, Object
 
 Required: False
 Position: 0
-Default value: None
+Default value: HTML
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -UserName
-{{ Fill UserName Description }}
+Specifies the username to run the function as on the remote computer.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: User
+Possible values: 
 
 Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -142,11 +152,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

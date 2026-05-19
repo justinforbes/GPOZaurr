@@ -4,59 +4,41 @@ Module Name: GPOZaurr
 online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-# Get-GPOZaurrAD
+# Get-GPOZaurrRedirect
 ## SYNOPSIS
-Retrieves Group Policy Objects (GPOs) information from Active Directory.
+Command to detect if GPOs have correct path in SYSVOL, or someone changed it manually.
 
 ## SYNTAX
 ### Default (Default)
 ```powershell
-Get-GPOZaurrAD [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-DateFrom <datetime>] [-DateTo <datetime>] [-DateRange <string>] [-DateProperty <string[]>] [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
+Get-GPOZaurrRedirect [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-DateFrom <datetime>] [-DateTo <datetime>] [-DateRange <string>] [-DateProperty <string[]>] [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
 ```
 
 ### GPOName
 ```powershell
-Get-GPOZaurrAD [-GPOName <string>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-DateFrom <datetime>] [-DateTo <datetime>] [-DateRange <string>] [-DateProperty <string[]>] [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
+Get-GPOZaurrRedirect [-GPOName <string>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-DateFrom <datetime>] [-DateTo <datetime>] [-DateRange <string>] [-DateProperty <string[]>] [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
 ```
 
 ### GPOGUID
 ```powershell
-Get-GPOZaurrAD [-GPOGuid <string>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-DateFrom <datetime>] [-DateTo <datetime>] [-DateRange <string>] [-DateProperty <string[]>] [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
+Get-GPOZaurrRedirect [-GPOGuid <string>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-DateFrom <datetime>] [-DateTo <datetime>] [-DateRange <string>] [-DateProperty <string[]>] [-ExtendedForestInformation <IDictionary>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This function retrieves information about Group Policy Objects (GPOs) from Active Directory based on specified criteria such as GPO name, GPO GUID, date range, and forest details.
+Command to detect if GPOs have correct path in SYSVOL, or someone changed it manually.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```powershell
-PS > Get-GPOZaurrAD -GPOName "ExampleGPO"
+PS > Get-GPOZaurrRedirect | Format-Table
 ```
 
-Description:
-Retrieves information about a GPO with the name "ExampleGPO".
-
-### EXAMPLE 2
-```powershell
-PS > Get-GPOZaurrAD -GPOGuid "{12345678-1234-1234-1234-123456789012}"
-```
-
-Description:
-Retrieves information about a GPO with the specified GUID.
-
-### EXAMPLE 3
-```powershell
-PS > Get-GPOZaurrAD -Forest "example.com" -IncludeDomains "domain1", "domain2" -DateRange "Last30Days"
-```
-
-Description:
-Retrieves GPO information from the forest "example.com" for domains "domain1" and "domain2" created or modified in the last 30 days.
 
 ## PARAMETERS
 
 ### -DateFrom
-Specifies the start date for filtering GPOs based on creation or modification date.
+Provide a date from which to start the search, by default the last X days are used
 
 ```yaml
 Type: DateTime
@@ -72,7 +54,7 @@ Accept wildcard characters: True
 ```
 
 ### -DateProperty
-Specifies the property (WhenCreated or WhenChanged) to use for filtering GPOs based on date.
+Choose a date property. It can be WhenCreated or WhenChanged or both. By default whenCreated is used for comparison purposes
 
 ```yaml
 Type: String[]
@@ -88,7 +70,7 @@ Accept wildcard characters: True
 ```
 
 ### -DateRange
-Specifies a predefined date range for filtering GPOs based on creation or modification date.
+Provide a date range to search for, by default the last X days are used
 
 ```yaml
 Type: String
@@ -104,7 +86,7 @@ Accept wildcard characters: True
 ```
 
 ### -DateTo
-Specifies the end date for filtering GPOs based on creation or modification date.
+Provide a date to which to end the search, by default the last X days are used
 
 ```yaml
 Type: DateTime
@@ -120,7 +102,7 @@ Accept wildcard characters: True
 ```
 
 ### -ExcludeDomains
-Specifies an array of domains to exclude from the search.
+Exclude domain from search, by default whole forest is scanned
 
 ```yaml
 Type: String[]
@@ -136,7 +118,7 @@ Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
-Specifies additional forest information to include in the output.
+Ability to provide Forest Information from another command to speed up processing
 
 ```yaml
 Type: IDictionary
@@ -152,7 +134,7 @@ Accept wildcard characters: True
 ```
 
 ### -Forest
-Specifies the forest name to search for GPOs.
+Target different Forest, by default current forest is used
 
 ```yaml
 Type: String
@@ -168,7 +150,7 @@ Accept wildcard characters: True
 ```
 
 ### -GPOGuid
-Specifies the GUID of the GPO to retrieve.
+Provide GPO GUID to search for. By default command returns all GPOs
 
 ```yaml
 Type: String
@@ -184,7 +166,7 @@ Accept wildcard characters: True
 ```
 
 ### -GPOName
-Specifies the name of the GPO to retrieve.
+Provide GPO name to search for. By default command returns all GPOs
 
 ```yaml
 Type: String
@@ -200,7 +182,7 @@ Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
-Specifies an array of domains to include in the search.
+Include only specific domains, by default whole forest is scanned
 
 ```yaml
 Type: String[]

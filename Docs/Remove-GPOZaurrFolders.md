@@ -1,219 +1,191 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Remove-GPOZaurrFolders
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes specified GPOZaurr folders and backs them up to a specified path.
 
 ## SYNTAX
-
-```
-Remove-GPOZaurrFolders [[-BackupPath] <String>] [-BackupDated] [[-Type] <String[]>] [-FolderType] <String>
- [[-FolderName] <String[]>] [[-LimitProcessing] <Int32>] [[-Forest] <String>] [[-ExcludeDomains] <String[]>]
- [[-IncludeDomains] <String[]>] [[-ExtendedForestInformation] <IDictionary>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Remove-GPOZaurrFolders [[-BackupPath] <string>] [[-Type] <string[]>] [-FolderType] <string> [[-FolderName] <string[]>] [[-LimitProcessing] <int>] [[-Forest] <string>] [[-ExcludeDomains] <string[]>] [[-IncludeDomains] <string[]>] [[-ExtendedForestInformation] <IDictionary>] [-BackupDated] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This function removes specified GPOZaurr folders based on the provided criteria and backs them up to a specified path. It allows for filtering by folder type, domain, and other parameters.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Remove-GPOZaurrFolders -BackupPath "C:\Backups" -BackupDated -Type 'All' -FolderType 'NTFRS' -FolderName "Folder1" -LimitProcessing 10 -Forest "ExampleForest" -ExcludeDomains "Domain1" -IncludeDomains "Domain2" -ExtendedForestInformation $info
+Removes GPOZaurr folders of type 'NTFRS' named "Folder1" from all domains in the forest "ExampleForest", backs them up to "C:\Backups" with a timestamp, and limits processing to 10 folders.
 ```
 
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -BackupDated
-{{ Fill BackupDated Description }}
+Indicates whether the backup path should include a timestamp.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -BackupPath
-{{ Fill BackupPath Description }}
+The path where the GPOZaurr folders will be backed up.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExcludeDomains
-{{ Fill ExcludeDomains Description }}
+Specifies domains to exclude from processing.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 6
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
-{{ Fill ExtendedForestInformation Description }}
+Specifies additional forest information.
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 8
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -FolderName
-{{ Fill FolderName Description }}
+Specifies the name of the folder to remove.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 3
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -FolderType
-{{ Fill FolderType Description }}
+Specifies the type of folders to remove. Options are 'NTFRS' or 'Empty'.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-Accepted values: NTFRS, Empty
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: NTFRS, Empty
 
 Required: True
 Position: 2
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Forest
-{{ Fill Forest Description }}
+Specifies the forest to target.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: ForestName
+Possible values: 
 
 Required: False
 Position: 5
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
-{{ Fill IncludeDomains Description }}
+Specifies domains to include in processing.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
 Position: 7
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -LimitProcessing
-{{ Fill LimitProcessing Description }}
+Limits the number of folders to process.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 4
-Default value: None
+Default value: 2147483647
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Type
-{{ Fill Type Description }}
+Specifies the type of folders to remove. Options are 'All', 'Netlogon', or 'Sysvol'.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
-Accepted values: All, Netlogon, Sysvol
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: All, Netlogon, Sysvol
 
 Required: False
 Position: 1
-Default value: None
+Default value: All
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -221,11 +193,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

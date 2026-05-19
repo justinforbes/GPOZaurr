@@ -1,186 +1,192 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Get-GPOZaurrPermissionConsistency
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves information about Group Policy Objects (GPOs) and checks permission consistency across domains.
 
 ## SYNTAX
-
 ### Type (Default)
-```
-Get-GPOZaurrPermissionConsistency [-Type <String[]>] [-Forest <String>] [-ExcludeDomains <String[]>]
- [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>] [-IncludeGPOObject]
- [-VerifyInheritance] [<CommonParameters>]
+```powershell
+Get-GPOZaurrPermissionConsistency [-Type <string[]>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-IncludeGPOObject] [-VerifyInheritance] [<CommonParameters>]
 ```
 
 ### GPOName
-```
-Get-GPOZaurrPermissionConsistency [-GPOName <String>] [-Forest <String>] [-ExcludeDomains <String[]>]
- [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>] [-IncludeGPOObject]
- [-VerifyInheritance] [<CommonParameters>]
+```powershell
+Get-GPOZaurrPermissionConsistency [-GPOName <string>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-IncludeGPOObject] [-VerifyInheritance] [<CommonParameters>]
 ```
 
 ### GPOGUID
-```
-Get-GPOZaurrPermissionConsistency [-GPOGuid <String>] [-Forest <String>] [-ExcludeDomains <String[]>]
- [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>] [-IncludeGPOObject]
- [-VerifyInheritance] [<CommonParameters>]
+```powershell
+Get-GPOZaurrPermissionConsistency [-GPOGuid <string>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-IncludeGPOObject] [-VerifyInheritance] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Get-GPOZaurrPermissionConsistency function retrieves information about GPOs and checks permission consistency across domains. It can filter by GPO name, GPO GUID, or type of consistency. It also provides options to include/exclude specific domains and verify inheritance.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Get-GPOZaurrPermissionConsistency -GPOName "TestGPO" -Forest "Contoso" -IncludeDomains @("DomainA", "DomainB") -Type "Consistent"
+Retrieves permission consistency information for the GPO named "TestGPO" in the forest "Contoso" for domains "DomainA" and "DomainB" with consistent permissions.
 ```
 
-{{ Add example description here }}
+
+### EXAMPLE 2
+```powershell
+PS > Get-GPOZaurrPermissionConsistency -GPOGuid "12345678-1234-1234-1234-1234567890AB" -Forest "Fabrikam" -Type "Inconsistent" -VerifyInheritance
+Retrieves permission consistency information for the GPO with GUID "12345678-1234-1234-1234-1234567890AB" in the forest "Fabrikam" for all domains with inconsistent permissions and verifies inheritance.
+```
+
 
 ## PARAMETERS
 
 ### -ExcludeDomains
-{{ Fill ExcludeDomains Description }}
+Specifies an array of domains to exclude from the search.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Type, GPOName, GPOGUID
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
-{{ Fill ExtendedForestInformation Description }}
+Specifies additional information about the forest.
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Type, GPOName, GPOGUID
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Forest
-{{ Fill Forest Description }}
+Specifies the forest name to retrieve GPO information from.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Type, GPOName, GPOGUID
 Aliases: ForestName
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -GPOGuid
-{{ Fill GPOGuid Description }}
+Specifies the GUID of the GPO to retrieve.
 
 ```yaml
 Type: String
 Parameter Sets: GPOGUID
 Aliases: GUID, GPOID
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -GPOName
-{{ Fill GPOName Description }}
+Specifies the name of the GPO to retrieve.
 
 ```yaml
 Type: String
 Parameter Sets: GPOName
-Aliases:
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
-{{ Fill IncludeDomains Description }}
+Specifies an array of domains to include in the search.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: Type, GPOName, GPOGUID
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeGPOObject
-{{ Fill IncludeGPOObject Description }}
+Indicates whether to include the GPO object in the output.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Type, GPOName, GPOGUID
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Type
-{{ Fill Type Description }}
+Specifies the type of consistency to check. Valid values are 'Consistent', 'Inconsistent', or 'All'.
 
 ```yaml
 Type: String[]
 Parameter Sets: Type
-Aliases:
-Accepted values: Consistent, Inconsistent, All
+Aliases: 
+Possible values: Consistent, Inconsistent, All
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: All
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -VerifyInheritance
-{{ Fill VerifyInheritance Description }}
+Indicates whether to verify inheritance of permissions.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Type, GPOName, GPOGUID
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -188,11 +194,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

@@ -1,21 +1,17 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Invoke-GPOZaurr
-
 ## SYNOPSIS
 Single cmdlet that provides 360 degree overview of Group Policies in Active Directory Forest.
 
 ## SYNTAX
-
-```
-Invoke-GPOZaurr [[-Exclusions] <Object>] [-FilePath <String>] [[-Type] <String[]>] [-PassThru] [-HideHTML]
- [-HideSteps] [-ShowError] [-ShowWarning] [-Forest <String>] [-ExcludeDomains <String[]>]
- [-IncludeDomains <String[]>] [-Online] [-SplitReports] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Invoke-GPOZaurr [[-Type] <string[]>] [[-Exclusions] <Object>] [-FilePath <string>] [-PassThru] [-HideHTML] [-HideSteps] [-ShowError] [-ShowWarning] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-Online] [-SplitReports] [-GPOName <string[]>] [-GPOGUID <string[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,19 +20,36 @@ Single cmdlet that provides 360 degree overview of Group Policies in Active Dire
 ## EXAMPLES
 
 ### EXAMPLE 1
+```powershell
+PS > Invoke-GPOZaurr
 ```
-Invoke-GPOZaurr
-```
+
 
 ### EXAMPLE 2
-```
-Invoke-GPOZaurr -Type GPOOrganizationalUnit -Online -FilePath $PSScriptRoot\Reports\GPOZaurrOU.html -Exclusions @(
+```powershell
+PS > Invoke-GPOZaurr -Type GPOOrganizationalUnit -Online -FilePath $PSScriptRoot\Reports\GPOZaurrOU.html -Exclusions @(
+    '*OU=Production,DC=ad,DC=evotec,DC=pl'
+)
 ```
 
-'*OU=Production,DC=ad,DC=evotec,DC=pl'
-)
 
 ## PARAMETERS
+
+### -ExcludeDomains
+Exclude domain from search, by default whole forest is scanned
+
+```yaml
+Type: String[]
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
 
 ### -Exclusions
 Allows to mark as excluded some Group Policies or Organizational Units depending on type.
@@ -47,14 +60,15 @@ Exclusions should be used only if there is single report being asked for.
 
 ```yaml
 Type: Object
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: ExcludeGroupPolicies, ExclusionsCode
+Possible values: 
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -FilePath
@@ -62,106 +76,15 @@ Path to the file where the report will be saved.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Type
-Type of report to be generated from a list of available reports.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PassThru
-Returns created objects after the report is done
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HideHTML
-Do not auto open HTML report in default browser
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HideSteps
-Do not show steps in report
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShowError
-Show errors in HTML report.
-Useful in case the report is being run as Scheduled Task
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ShowWarning
-Show warnings in HTML report.
-Useful in case the report is being run as Scheduled Task
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Forest
@@ -169,29 +92,79 @@ Target different Forest, by default current forest is used
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: ForestName
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
-### -ExcludeDomains
-Exclude domain from search, by default whole forest is scanned
+### -GPOGUID
+{{ Fill GPOGUID Description }}
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: GUID
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
+```
+
+### -GPOName
+{{ Fill GPOName Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: __AllParameterSets
+Aliases: Name
+Possible values: 
+
+Required: False
+Position: named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -HideHTML
+Do not auto open HTML report in default browser
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -HideSteps
+Do not show steps in report
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
@@ -199,14 +172,15 @@ Include only specific domains, by default whole forest is scanned
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Online
@@ -214,30 +188,95 @@ Forces report to use online resources in HTML (using CDN most of the time), by d
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
-### -SplitReports
-Split report into multiple files, one for each report.
-This can be useful for large domains with huge reports.
+### -PassThru
+Returns created objects after the report is done
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
+```
+
+### -ShowError
+Show errors in HTML report. Useful in case the report is being run as Scheduled Task
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -ShowWarning
+Show warnings in HTML report. Useful in case the report is being run as Scheduled Task
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -SplitReports
+Split report into multiple files, one for each report. This can be useful for large domains with huge reports.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### -Type
+Type of report to be generated from a list of available reports.
+
+```yaml
+Type: String[]
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -245,9 +284,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+- `None`
+
 ## OUTPUTS
 
-## NOTES
-General notes
+- `None`
 
 ## RELATED LINKS
+
+- None
+

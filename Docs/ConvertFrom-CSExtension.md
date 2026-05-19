@@ -1,63 +1,70 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # ConvertFrom-CSExtension
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Converts Client-side Extension (CSE) GUIDs to their corresponding names.
 
 ## SYNTAX
-
-```
-ConvertFrom-CSExtension [[-CSE] <String[]>] [-Limited] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+ConvertFrom-CSExtension [[-CSE] <string[]>] [-Limited] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+This function takes an array of CSE GUIDs and returns their corresponding names. It can be used to easily identify the purpose of each CSE GUID.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > ConvertFrom-CSExtension -CSE '{35378EAC-683F-11D2-A89A-00C04FBBCFA2}', '{0F6B957E-509E-11D1-A7CC-0000F87571E3}' -Limited
+Converts the specified CSE GUIDs to their corresponding names, limited to a predefined set.
 ```
 
-{{ Add example description here }}
+
+### EXAMPLE 2
+```powershell
+PS > ConvertFrom-CSExtension -CSE '{D02B1F73-3407-48AE-BA88-E8213C6761F1}', '{0ACDD40C-75AC-47ab-BAA0-BF6DE7E7FE63}'
+Converts the specified CSE GUIDs to their corresponding names without any limitations.
+```
+
 
 ## PARAMETERS
 
 ### -CSE
-{{ Fill CSE Description }}
+Specifies an array of Client-side Extension (CSE) GUIDs to be converted to names.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 0
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Limited
-{{ Fill Limited Description }}
+Indicates whether the conversion should be limited to a predefined set of CSE GUIDs.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: False
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -65,11 +72,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

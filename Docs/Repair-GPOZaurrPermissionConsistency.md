@@ -1,186 +1,160 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Repair-GPOZaurrPermissionConsistency
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Repairs permission consistency for Group Policy Objects (GPOs) in a specified domain or forest.
 
 ## SYNTAX
-
 ### Default (Default)
-```
-Repair-GPOZaurrPermissionConsistency [-Forest <String>] [-ExcludeDomains <String[]>]
- [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>] [-LimitProcessing <Int32>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+```powershell
+Repair-GPOZaurrPermissionConsistency [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-LimitProcessing <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GPOName
-```
-Repair-GPOZaurrPermissionConsistency [-GPOName <String>] [-Forest <String>] [-ExcludeDomains <String[]>]
- [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>] [-LimitProcessing <Int32>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+```powershell
+Repair-GPOZaurrPermissionConsistency [-GPOName <string>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-LimitProcessing <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GPOGUID
-```
-Repair-GPOZaurrPermissionConsistency [-GPOGuid <String>] [-Forest <String>] [-ExcludeDomains <String[]>]
- [-IncludeDomains <String[]>] [-ExtendedForestInformation <IDictionary>] [-LimitProcessing <Int32>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+```powershell
+Repair-GPOZaurrPermissionConsistency [-GPOGuid <string>] [-Forest <string>] [-ExcludeDomains <string[]>] [-IncludeDomains <string[]>] [-ExtendedForestInformation <IDictionary>] [-LimitProcessing <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Repair-GPOZaurrPermissionConsistency function repairs permission consistency for GPOs in a specified domain or forest. It checks for inconsistencies in GPO permissions and attempts to make them consistent.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Repair-GPOZaurrPermissionConsistency -GPOName "ExampleGPO" -Forest "example.com"
+Repairs permission consistency for the GPO named "ExampleGPO" in the "example.com" forest.
 ```
 
-{{ Add example description here }}
+
+### EXAMPLE 2
+```powershell
+PS > Repair-GPOZaurrPermissionConsistency -GPOGuid "12345678-1234-1234-1234-1234567890AB" -ExcludeDomains @("domain1", "domain2") -LimitProcessing 5
+Repairs permission consistency for the GPO with the specified GUID, excluding domains "domain1" and "domain2", and processing a maximum of 5 GPOs.
+```
+
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExcludeDomains
-{{ Fill ExcludeDomains Description }}
+Specifies an array of domains to exclude from the repair process.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Default, GPOName, GPOGUID
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ExtendedForestInformation
-{{ Fill ExtendedForestInformation Description }}
+Specifies additional information about the forest.
 
 ```yaml
 Type: IDictionary
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Default, GPOName, GPOGUID
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Forest
-{{ Fill Forest Description }}
+Specifies the forest where the GPOs are located.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Default, GPOName, GPOGUID
 Aliases: ForestName
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -GPOGuid
-{{ Fill GPOGuid Description }}
+Specifies the GUID of the GPO to repair.
 
 ```yaml
 Type: String
 Parameter Sets: GPOGUID
 Aliases: GUID, GPOID
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -GPOName
-{{ Fill GPOName Description }}
+Specifies the name of the GPO to repair.
 
 ```yaml
 Type: String
 Parameter Sets: GPOName
-Aliases:
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -IncludeDomains
-{{ Fill IncludeDomains Description }}
+Specifies an array of domains to include in the repair process.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: Default, GPOName, GPOGUID
 Aliases: Domain, Domains
+Possible values: 
 
 Required: False
-Position: Named
+Position: named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -LimitProcessing
-{{ Fill LimitProcessing Description }}
+Specifies the maximum number of GPOs to process.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Default, GPOName, GPOGUID
+Aliases: 
+Possible values: 
 
 Required: False
-Position: Named
-Default value: None
+Position: named
+Default value: 2147483647
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -188,11 +162,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+

@@ -1,63 +1,70 @@
 ---
 external help file: GPOZaurr-help.xml
 Module Name: GPOZaurr
-online version:
+online version: https://github.com/EvotecIT/GPOZaurr
 schema: 2.0.0
 ---
-
 # Find-CSExtension
-
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This function retrieves Group Policy Client Side Extensions (CSEs) from a specified Windows computer.
 
 ## SYNTAX
-
-```
-Find-CSExtension [[-CSE] <String[]>] [[-ComputerName] <String>] [<CommonParameters>]
+### __AllParameterSets
+```powershell
+Find-CSExtension [[-CSE] <string[]>] [[-ComputerName] <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The Find-CSExtension function lists Group Policy Client Side Extensions (CSEs) configured on a Windows computer. It queries the Windows Registry to retrieve information about the CSEs.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS > Find-CSExtension -ComputerName "Computer01"
+Retrieves all CSEs configured on the computer named "Computer01".
 ```
 
-{{ Add example description here }}
+
+### EXAMPLE 2
+```powershell
+PS > Find-CSExtension -CSE "CSE1", "CSE2" -ComputerName "Computer02"
+Retrieves information about CSEs named "CSE1" and "CSE2" on the computer named "Computer02".
+```
+
 
 ## PARAMETERS
 
-### -CSE
-{{ Fill CSE Description }}
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ComputerName
-{{ Fill ComputerName Description }}
+Specifies the name of the computer from which to retrieve the CSE information.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
 
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
+```
+
+### -CSE
+Specifies an array of CSE names to filter the results. If not provided, all CSEs will be listed.
+
+```yaml
+Type: String[]
+Parameter Sets: __AllParameterSets
+Aliases: 
+Possible values: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
 ```
 
 ### CommonParameters
@@ -65,11 +72,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+- `None`
 
 ## OUTPUTS
 
-### System.Object
-## NOTES
+- `None`
 
 ## RELATED LINKS
+
+- None
+
