@@ -25,8 +25,8 @@ Build-Module -ModuleName 'GPOZaurr' {
     }
     New-ConfigurationManifest @Manifest
 
-    New-ConfigurationModule -Type RequiredModule -Name 'PSWriteColor', 'PSSharedGoods', 'ADEssentials' -Guid Auto -Version Latest
-    New-ConfigurationModule -Type RequiredModule -Name "PSWriteHTML" -Guid Auto -Version Latest
+    New-ConfigurationModule -Type RequiredModule -Name 'PSWriteColor', 'PSSharedGoods', 'ADEssentials' -Guid Auto -Version Latest -VersionSource PSGallery
+    New-ConfigurationModule -Type RequiredModule -Name "PSWriteHTML" -Guid Auto -Version Latest -VersionSource PSGallery
     #New-ConfigurationModule -Type ExternalModule -Name 'Microsoft.PowerShell.Utility', 'Microsoft.PowerShell.Management','Microsoft.PowerShell.Security'
     New-ConfigurationModule -Type ApprovedModule -Name 'PSSharedGoods', 'PSWriteColor', 'Connectimo', 'PSUnifi', 'PSWebToolbox', 'PSMyPassword', 'ADEssentials'
     New-ConfigurationModuleSkip -IgnoreModuleName @(
@@ -39,6 +39,7 @@ Build-Module -ModuleName 'GPOZaurr' {
         'NetConnection'
         'NetSecurity'
         'NetTCPIP'
+        'CimCmdlets'
     ) -IgnoreFunctionName @(
         'Select-Unique'
     )
@@ -210,8 +211,8 @@ Build-Module -ModuleName 'GPOZaurr' {
     New-ConfigurationArtefact -Type Packed -Enable -Path "$PSScriptRoot\..\Artefacts\Packed" -ArtefactName '<ModuleName>.v<ModuleVersion>.zip' -AddRequiredModules
 
     # options for publishing to github/psgallery
-    if (-not $SkipPublish) {
-        #New-ConfigurationPublish -Type PowerShellGallery -FilePath 'C:\Support\Important\PowerShellGalleryAPI.txt' -Enabled:$true
-        # New-ConfigurationPublish -Type GitHub -FilePath 'C:\Support\Important\GitHubAPI.txt' -UserName 'EvotecIT' -Enabled:$true -GenerateReleaseNotes
-    }
+
+    #New-ConfigurationPublish -Type PowerShellGallery -FilePath 'C:\Support\Important\PowerShellGalleryAPI.txt' -Enabled:$true -UseAsDependencyVersionSource
+    #New-ConfigurationPublish -Type GitHub -FilePath 'C:\Support\Important\GitHubAPI.txt' -UserName 'EvotecIT' -Enabled:$true -GenerateReleaseNotes
+
 } -ExitCode
