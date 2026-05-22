@@ -41,8 +41,8 @@ Specifies an array of domains to exclude from the report.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 2
@@ -57,8 +57,8 @@ Specifies additional information about the forest.
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 4
@@ -74,7 +74,7 @@ Specifies the forest name to retrieve GPO links from.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 1
@@ -90,7 +90,7 @@ Specifies an array of domains to include in the report.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 3
@@ -105,7 +105,7 @@ Specifies the type of report to generate. Valid values are 'All', 'MultipleLinks
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: All, MultipleLinks, OneLink, LinksSummary
 
 Required: False
@@ -121,8 +121,8 @@ Indicates whether to include unlimited properties in the report.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -145,4 +145,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

@@ -39,8 +39,8 @@ Specifies domains to exclude from the search.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 3
@@ -55,7 +55,7 @@ Specifies the root permission types to exclude from the search.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: GpoRootCreate, GpoRootOwner
 
 Required: False
@@ -71,8 +71,8 @@ Provides additional forest information to speed up processing.
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 5
@@ -88,7 +88,7 @@ Specifies the target forest. By default, the current forest is used.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 2
@@ -104,7 +104,7 @@ Specifies domains to include in the search.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 4
@@ -119,7 +119,7 @@ Specifies the root permission types to include in the search.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: GpoRootCreate, GpoRootOwner
 
 Required: False
@@ -135,8 +135,8 @@ Skips processing names during the operation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -159,4 +159,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

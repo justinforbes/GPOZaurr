@@ -54,8 +54,8 @@ Ability to provide ADAdministrativeGroups from different function to speed up pr
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 9
@@ -70,8 +70,8 @@ Exclude domain from search, by default whole forest is scanned
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 5
@@ -86,8 +86,8 @@ Marks the GPO as excluded from the list.
 ```yaml
 Type: ScriptBlock
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 0
@@ -102,8 +102,8 @@ Ability to provide Forest Information from another command to speed up processin
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 7
@@ -119,7 +119,7 @@ Target different Forest, by default current forest is used
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 4
@@ -135,7 +135,7 @@ Provide a GPOGuid to get information about a specific GPO.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: GUID, GPOID
-Possible values: 
+Possible values:
 
 Required: False
 Position: 2
@@ -150,8 +150,8 @@ Provide a GPOName to get information about a specific GPO.
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 1
@@ -166,8 +166,8 @@ Define GPOPath where the XML files are located to be analyzed instead of asking 
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 8
@@ -183,7 +183,7 @@ Include only specific domains, by default whole forest is scanned
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 6
@@ -198,8 +198,8 @@ Provide limited output without analyzing XML data
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -214,8 +214,8 @@ only show owner information, by default all information is shown
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -230,8 +230,8 @@ Only show permissions, by default all information is shown
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -246,7 +246,7 @@ Choose a specific type of GPO. Options are: 'Empty', 'Unlinked', 'Disabled', 'No
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: Empty, Unlinked, Disabled, NoApplyPermission, All
 
 Required: False
@@ -270,4 +270,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

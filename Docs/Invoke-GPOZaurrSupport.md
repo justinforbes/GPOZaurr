@@ -42,7 +42,7 @@ Specifies the name of the remote computer to retrieve Group Policy information f
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: Server
-Possible values: 
+Possible values:
 
 Required: False
 Position: 1
@@ -57,8 +57,8 @@ Runs the function online to retrieve the latest Group Policy information.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -73,8 +73,8 @@ Specifies the path to save the output file. If not provided, a temporary file wi
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 3
@@ -89,8 +89,8 @@ Prevents displaying the output in the console.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -105,8 +105,8 @@ Specifies the delimiter for splitting output data. Default is a new line.
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 4
@@ -121,7 +121,7 @@ Specifies the type of output format. Valid values are 'NativeHTML', 'HTML', 'XML
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: NativeHTML, HTML, XML, Object
 
 Required: False
@@ -138,7 +138,7 @@ Specifies the username to run the function as on the remote computer.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: User
-Possible values: 
+Possible values:
 
 Required: False
 Position: 2
@@ -161,4 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

@@ -38,8 +38,8 @@ Choose Owner Name to set for Group Policy
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 1
@@ -54,7 +54,7 @@ Choose Owner Type. When chosing Administrative Type, owner will be set to Domain
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: Administrative, Default
 
 Required: False
@@ -78,4 +78,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

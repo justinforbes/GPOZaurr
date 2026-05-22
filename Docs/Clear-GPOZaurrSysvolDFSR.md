@@ -41,8 +41,8 @@ Specifies an array of domain controllers to exclude from the cleanup process.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 2
@@ -57,8 +57,8 @@ Specifies an array of domains to exclude from the cleanup process.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 1
@@ -73,8 +73,8 @@ Specifies additional forest information if needed.
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 5
@@ -90,7 +90,7 @@ Specifies the forest name where the GPOs are located.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 0
@@ -106,7 +106,7 @@ Specifies an array of domain controllers to include in the cleanup process.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: DomainControllers
-Possible values: 
+Possible values:
 
 Required: False
 Position: 4
@@ -122,7 +122,7 @@ Specifies an array of domains to include in the cleanup process.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 3
@@ -137,8 +137,8 @@ Specifies the maximum number of GPOs to process.
 ```yaml
 Type: Int32
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 6
@@ -153,8 +153,8 @@ Indicates whether Read-Only Domain Controllers (RODCs) should be skipped during 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -177,4 +177,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

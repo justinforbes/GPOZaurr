@@ -38,7 +38,7 @@ PS > Set-GPOZaurrOwner -Type All -Verbose -WhatIf -LimitProcessing 2
 ```yaml
 Type: String
 Parameter Sets: Type, Named
-Aliases: 
+Aliases:
 Possible values: OnlyAD, OnlyFileSystem
 
 Required: False
@@ -55,7 +55,7 @@ Accept wildcard characters: True
 Type: String[]
 Parameter Sets: Type, Named
 Aliases: Exclusion, Exclusions
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -70,8 +70,8 @@ Exclude domain from search, by default whole forest is scanned
 ```yaml
 Type: String[]
 Parameter Sets: Type, Named
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -86,8 +86,8 @@ Ability to provide Forest Information from another command to speed up processin
 ```yaml
 Type: IDictionary
 Parameter Sets: Type, Named
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -102,8 +102,8 @@ Pushes new owner regardless if it's already set or not
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Type, Named
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -119,7 +119,7 @@ Target different Forest, by default current forest is used
 Type: String
 Parameter Sets: Type, Named
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -135,7 +135,7 @@ GUID of GPO. By default all GPOs are targetted
 Type: String
 Parameter Sets: Named
 Aliases: GUID, GPOID
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -150,8 +150,8 @@ Name of GPO. By default all GPOs are targetted
 ```yaml
 Type: String
 Parameter Sets: Named
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -167,7 +167,7 @@ Include only specific domains, by default whole forest is scanned
 Type: String[]
 Parameter Sets: Type, Named
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -182,8 +182,8 @@ Allows to specify maximum number of items that will be fixed in a single run. It
 ```yaml
 Type: Int32
 Parameter Sets: Type, Named
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -198,8 +198,8 @@ Parameter description
 ```yaml
 Type: String
 Parameter Sets: Type, Named
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -214,8 +214,8 @@ Set GPO Owner only in Active Directory. By default GPO Owner is being set in bot
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Type, Named
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -234,7 +234,7 @@ All - if Owner is known it checks if it's Administrative, if it sn't it fixes th
 ```yaml
 Type: String
 Parameter Sets: Type
-Aliases: 
+Aliases:
 Possible values: Unknown, NotAdministrative, NotMatching, Inconsistent, All
 
 Required: True
@@ -258,4 +258,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

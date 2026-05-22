@@ -41,8 +41,8 @@ Specifies the name of the computer from which to retrieve the CSE information.
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 1
@@ -57,8 +57,8 @@ Specifies an array of CSE names to filter the results. If not provided, all CSEs
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 0
@@ -81,4 +81,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

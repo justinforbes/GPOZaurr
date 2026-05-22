@@ -52,8 +52,8 @@ PS > Optimize-GPOZaurr -All -WhatIf -Verbose -LimitProcessing 2 {
 ```yaml
 Type: SwitchParameter
 Parameter Sets: All
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: True
 Position: named
@@ -68,8 +68,8 @@ Exclude domain from search, by default whole forest is scanned
 ```yaml
 Type: String[]
 Parameter Sets: GPOName, GPOGUID, All
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -84,8 +84,8 @@ Provide a list of group policies to skip using Skip-GroupPolicy cmdlet
 ```yaml
 Type: ScriptBlock
 Parameter Sets: GPOName, GPOGUID, All
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 1
@@ -100,8 +100,8 @@ Ability to provide Forest Information from another command to speed up processin
 ```yaml
 Type: IDictionary
 Parameter Sets: GPOName, GPOGUID, All
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -117,7 +117,7 @@ Target different Forest, by default current forest is used
 Type: String
 Parameter Sets: GPOName, GPOGUID, All
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -133,7 +133,7 @@ Accept wildcard characters: True
 Type: String
 Parameter Sets: GPOGUID
 Aliases: GUID, GPOID
-Possible values: 
+Possible values:
 
 Required: True
 Position: named
@@ -149,7 +149,7 @@ Accept wildcard characters: True
 Type: String
 Parameter Sets: GPOName
 Aliases: Name, DisplayName
-Possible values: 
+Possible values:
 
 Required: True
 Position: named
@@ -165,7 +165,7 @@ Include only specific domains, by default whole forest is scanned
 Type: String[]
 Parameter Sets: GPOName, GPOGUID, All
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -180,8 +180,8 @@ Allows to specify maximum number of items that will be fixed in a single run. It
 ```yaml
 Type: Int32
 Parameter Sets: GPOName, GPOGUID, All
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -204,4 +204,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

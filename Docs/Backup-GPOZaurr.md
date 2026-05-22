@@ -41,8 +41,8 @@ Whether cmdlet should created Dated folders for executed backup or not. Keep in 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -57,8 +57,8 @@ Path where to keep the backup
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 6
@@ -73,8 +73,8 @@ Exclude domain from search, by default whole forest is scanned
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 3
@@ -89,8 +89,8 @@ Ability to provide Forest Information from another command to speed up processin
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 5
@@ -106,7 +106,7 @@ Target different Forest, by default current forest is used
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 2
@@ -122,7 +122,7 @@ Include only specific domains, by default whole forest is scanned
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 4
@@ -137,8 +137,8 @@ Limits amount of GPOs that are backed up
 ```yaml
 Type: Int32
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 0
@@ -153,7 +153,7 @@ Provides a way to backup only Empty or Unlinked GPOs. The default is All.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: Empty, Unlinked, Disabled, All
 
 Required: False
@@ -177,4 +177,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

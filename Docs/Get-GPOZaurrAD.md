@@ -61,8 +61,8 @@ Specifies the start date for filtering GPOs based on creation or modification da
 ```yaml
 Type: DateTime
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -77,7 +77,7 @@ Specifies the property (WhenCreated or WhenChanged) to use for filtering GPOs ba
 ```yaml
 Type: String[]
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
+Aliases:
 Possible values: WhenCreated, WhenChanged
 
 Required: False
@@ -93,7 +93,7 @@ Specifies a predefined date range for filtering GPOs based on creation or modifi
 ```yaml
 Type: String
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
+Aliases:
 Possible values: PastHour, CurrentHour, PastDay, CurrentDay, PastMonth, CurrentMonth, PastQuarter, CurrentQuarter, Last14Days, Last21Days, Last30Days, Last7Days, Last3Days, Last1Days
 
 Required: False
@@ -109,8 +109,8 @@ Specifies the end date for filtering GPOs based on creation or modification date
 ```yaml
 Type: DateTime
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -125,8 +125,8 @@ Specifies an array of domains to exclude from the search.
 ```yaml
 Type: String[]
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -141,8 +141,8 @@ Specifies additional forest information to include in the output.
 ```yaml
 Type: IDictionary
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -158,7 +158,7 @@ Specifies the forest name to search for GPOs.
 Type: String
 Parameter Sets: Default, GPOName, GPOGUID
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -174,7 +174,7 @@ Specifies the GUID of the GPO to retrieve.
 Type: String
 Parameter Sets: GPOGUID
 Aliases: GUID, GPOID
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -189,8 +189,8 @@ Specifies the name of the GPO to retrieve.
 ```yaml
 Type: String
 Parameter Sets: GPOName
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -206,7 +206,7 @@ Specifies an array of domains to include in the search.
 Type: String[]
 Parameter Sets: Default, GPOName, GPOGUID
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -229,4 +229,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

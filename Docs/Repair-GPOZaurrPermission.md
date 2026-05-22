@@ -34,8 +34,8 @@ Specifies an array of domains to exclude from the analysis.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 2
@@ -50,8 +50,8 @@ Specifies additional information about the forest.
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 4
@@ -67,7 +67,7 @@ Specifies the forest name to analyze GPO permissions.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 1
@@ -83,7 +83,7 @@ Specifies an array of domains to include in the analysis.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 3
@@ -98,8 +98,8 @@ Specifies the maximum number of GPOs to process.
 ```yaml
 Type: Int32
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 5
@@ -114,7 +114,7 @@ Specifies the type of permissions to repair. Valid values are 'AuthenticatedUser
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: AuthenticatedUsers, Unknown, System, Administrative, All
 
 Required: True
@@ -138,4 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

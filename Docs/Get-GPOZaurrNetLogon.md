@@ -58,8 +58,8 @@ Specifies an array of domains to exclude from GPO retrieval.
 ```yaml
 Type: String[]
 Parameter Sets: Default, OwnerOnly, SkipOwner
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -74,8 +74,8 @@ Specifies additional forest information to include in the output.
 ```yaml
 Type: IDictionary
 Parameter Sets: Default, OwnerOnly, SkipOwner
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -91,7 +91,7 @@ Specifies the forest name to retrieve GPO information from.
 Type: String
 Parameter Sets: Default, OwnerOnly, SkipOwner
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -107,7 +107,7 @@ Specifies an array of domains to include in GPO retrieval.
 Type: String[]
 Parameter Sets: Default, OwnerOnly, SkipOwner
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -122,8 +122,8 @@ Specifies whether to include only GPOs with identified owners.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: OwnerOnly
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -138,8 +138,8 @@ Specifies whether to skip checking the owner of GPOs.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SkipOwner
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -162,4 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

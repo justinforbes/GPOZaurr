@@ -41,8 +41,8 @@ Indicates whether to return the results as a hashtable.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -57,8 +57,8 @@ Specifies an array of domains to exclude from the search.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 3
@@ -73,8 +73,8 @@ Indicates whether to include extended information about the forest.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -89,8 +89,8 @@ Specifies additional forest information to include.
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 5
@@ -105,8 +105,8 @@ Indicates whether to include extended metadata information.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -122,7 +122,7 @@ Specifies the forest name to retrieve GPO information from.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 2
@@ -137,7 +137,7 @@ Specifies the hash algorithm to use for file verification. Valid values are 'Non
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: None, MACTripleDES, MD5, RIPEMD160, SHA1, SHA256, SHA384, SHA512
 
 Required: False
@@ -154,7 +154,7 @@ Specifies an array of domains to include in the search.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 4
@@ -169,8 +169,8 @@ Indicates whether to include file signatures for verification.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -185,7 +185,7 @@ Specifies the type of files to retrieve. Valid values are 'All', 'Netlogon', and
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: All, Netlogon, Sysvol
 
 Required: False
@@ -209,4 +209,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

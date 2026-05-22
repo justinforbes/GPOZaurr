@@ -51,8 +51,8 @@ Specifies an array of domains to exclude from the search.
 ```yaml
 Type: String[]
 Parameter Sets: Type, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -67,8 +67,8 @@ Specifies additional information about the forest.
 ```yaml
 Type: IDictionary
 Parameter Sets: Type, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -84,7 +84,7 @@ Specifies the forest name to retrieve GPO information from.
 Type: String
 Parameter Sets: Type, GPOName, GPOGUID
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -100,7 +100,7 @@ Specifies the GUID of the GPO to retrieve.
 Type: String
 Parameter Sets: GPOGUID
 Aliases: GUID, GPOID
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -115,8 +115,8 @@ Specifies the name of the GPO to retrieve.
 ```yaml
 Type: String
 Parameter Sets: GPOName
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -132,7 +132,7 @@ Specifies an array of domains to include in the search.
 Type: String[]
 Parameter Sets: Type, GPOName, GPOGUID
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -147,8 +147,8 @@ Indicates whether to include the GPO object in the output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Type, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -163,7 +163,7 @@ Specifies the type of consistency to check. Valid values are 'Consistent', 'Inco
 ```yaml
 Type: String[]
 Parameter Sets: Type
-Aliases: 
+Aliases:
 Possible values: Consistent, Inconsistent, All
 
 Required: False
@@ -179,8 +179,8 @@ Indicates whether to verify inheritance of permissions.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Type, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -203,4 +203,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

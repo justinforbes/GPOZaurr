@@ -35,8 +35,8 @@ Specifies an array of domains to exclude from the duplicate GPO removal process.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 2
@@ -51,8 +51,8 @@ Specifies additional information about the forest.
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 4
@@ -68,7 +68,7 @@ Specifies the forest where the duplicate GPOs are located.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 1
@@ -84,7 +84,7 @@ Specifies an array of domains to include in the duplicate GPO removal process.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 3
@@ -99,8 +99,8 @@ Specifies the maximum number of duplicate GPOs to process. Default is set to [in
 ```yaml
 Type: Int32
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 0
@@ -123,4 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

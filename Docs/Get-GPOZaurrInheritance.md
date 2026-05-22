@@ -34,8 +34,8 @@ Specifies the domain to exclude from the search. By default, the entire forest i
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 2
@@ -50,8 +50,8 @@ Specifies the OUs approved by IT to be excluded. You can provide OUs by canonica
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 0
@@ -66,8 +66,8 @@ Allows providing Forest Information from another command to speed up processing.
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 4
@@ -83,7 +83,7 @@ Specifies the target forest. By default, the current forest is used.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 1
@@ -98,8 +98,8 @@ Specifies whether to include OUs with blocked inheritance. By default, this is d
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -115,7 +115,7 @@ Specifies specific domains to include. By default, the entire forest is scanned.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 3
@@ -130,8 +130,8 @@ Specifies whether to show excluded objects. By default, this is disabled.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -146,8 +146,8 @@ Specifies whether to include Group Policies for blocked objects. By default, thi
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -162,8 +162,8 @@ Specifies whether to show only OUs with blocked inheritance.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -186,4 +186,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

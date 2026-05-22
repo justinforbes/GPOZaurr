@@ -60,8 +60,8 @@ Specifies the Active Directory object(s) to search for GPO links.
 ```yaml
 Type: ADObject[]
 Parameter Sets: ADObject
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: True
 Position: named
@@ -76,8 +76,8 @@ Accept wildcard characters: True
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linked, ADObject, Filter, Site
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -92,8 +92,8 @@ Specifies the domains to exclude from the search.
 ```yaml
 Type: String[]
 Parameter Sets: Linked, ADObject, Filter, Site
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -108,8 +108,8 @@ Accept wildcard characters: True
 ```yaml
 Type: IDictionary
 Parameter Sets: Linked, ADObject, Filter, Site
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -124,8 +124,8 @@ Specifies the filter criteria to search for GPO links.
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -141,7 +141,7 @@ Specifies the forest name for filtering GPO links.
 Type: String
 Parameter Sets: Linked, ADObject, Filter, Site
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -156,8 +156,8 @@ Specifies a cache for storing GPO information.
 ```yaml
 Type: IDictionary
 Parameter Sets: Linked, ADObject, Filter, Site
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -173,7 +173,7 @@ Specifies the domains to include in the search.
 Type: String[]
 Parameter Sets: Linked, ADObject, Filter, Site
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -188,8 +188,8 @@ Indicates whether to limit the search results.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linked, ADObject, Filter
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -204,7 +204,7 @@ Specifies the type of linked GPOs to retrieve. Valid values are 'All', 'Root', '
 ```yaml
 Type: String[]
 Parameter Sets: Linked
-Aliases: 
+Aliases:
 Possible values: All, Root, DomainControllers, Site, OrganizationalUnit
 
 Required: False
@@ -220,8 +220,8 @@ Specifies the search base for filtering GPO links.
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -236,7 +236,7 @@ Specifies the search scope for filtering GPO links.
 ```yaml
 Type: ADSearchScope
 Parameter Sets: Filter
-Aliases: 
+Aliases:
 Possible values: Base, OneLevel, Subtree
 
 Required: False
@@ -252,8 +252,8 @@ Specifies the site(s) to search for GPO links.
 ```yaml
 Type: String[]
 Parameter Sets: Site
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -268,8 +268,8 @@ Indicates whether to skip duplicate search results.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linked, ADObject, Filter
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -284,8 +284,8 @@ Accept wildcard characters: True
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Linked, ADObject, Filter, Site
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -308,4 +308,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

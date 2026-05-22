@@ -34,8 +34,8 @@ Specifies an array of domain names to exclude from the search for legacy GPO fil
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 1
@@ -50,8 +50,8 @@ Specifies additional information about the forest to enhance the retrieval proce
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 3
@@ -67,7 +67,7 @@ Specifies the name of the forest from which to retrieve legacy GPO files.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 0
@@ -83,7 +83,7 @@ Specifies an array of domain names to include in the search for legacy GPO files
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 2
@@ -106,4 +106,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

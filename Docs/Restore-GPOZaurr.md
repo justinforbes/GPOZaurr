@@ -39,8 +39,8 @@ The path to the folder containing the GPO backups.
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: True
 Position: 0
@@ -56,7 +56,7 @@ The display name of the GPO to be restored.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: Name
-Possible values: 
+Possible values:
 
 Required: False
 Position: 1
@@ -71,8 +71,8 @@ Accept wildcard characters: True
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 3
@@ -87,8 +87,8 @@ Accept wildcard characters: True
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 2
@@ -103,8 +103,8 @@ Accept wildcard characters: True
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -127,4 +127,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

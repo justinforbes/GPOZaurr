@@ -39,8 +39,8 @@ Exclude specific domain controllers, by default there are no exclusions, as long
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 2
@@ -55,8 +55,8 @@ Exclude domain from search, by default whole forest is scanned
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 1
@@ -71,8 +71,8 @@ Ability to provide Forest Information from another command to speed up processin
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 5
@@ -88,7 +88,7 @@ Target different Forest, by default current forest is used
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 0
@@ -104,7 +104,7 @@ Include only specific domain controllers, by default all domain controllers are 
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: DomainControllers
-Possible values: 
+Possible values:
 
 Required: False
 Position: 4
@@ -120,7 +120,7 @@ Include only specific domains, by default whole forest is scanned
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 3
@@ -135,8 +135,8 @@ Skip Read-Only Domain Controllers. By default all domain controllers are include
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -151,8 +151,8 @@ Forces cmdlet to check GPO Existance on Domain Controllers rather then per domai
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -175,4 +175,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

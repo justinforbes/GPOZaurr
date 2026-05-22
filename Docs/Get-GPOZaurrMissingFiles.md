@@ -41,8 +41,8 @@ Indicates whether to only display GPOs with missing files.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -57,8 +57,8 @@ Specifies an array of domains to exclude from the query.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 1
@@ -73,8 +73,8 @@ Specifies additional information about the forest.
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 3
@@ -90,7 +90,7 @@ Specifies the name of the forest to query for GPO information.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 0
@@ -105,8 +105,8 @@ Specifies the GUID of the GPO to retrieve information for.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 5
@@ -122,7 +122,7 @@ Specifies the name of the GPO to retrieve information for.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Name
-Possible values: 
+Possible values:
 
 Required: False
 Position: 4
@@ -138,7 +138,7 @@ Specifies an array of domains to include in the query.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 2
@@ -161,4 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

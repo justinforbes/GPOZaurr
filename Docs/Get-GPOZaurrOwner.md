@@ -49,8 +49,8 @@ Ability to provide AD Administrative Groups from another command to speed up pro
 ```yaml
 Type: IDictionary
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -66,7 +66,7 @@ Ability to provide different owner (non administrative that still is approved fo
 Type: String[]
 Parameter Sets: Default, GPOName, GPOGUID
 Aliases: Exclusion, Exclusions
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -81,8 +81,8 @@ Exclude domain from search, by default whole forest is scanned
 ```yaml
 Type: String[]
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -97,8 +97,8 @@ Ability to provide Forest Information from another command to speed up processin
 ```yaml
 Type: IDictionary
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -114,7 +114,7 @@ Target different Forest, by default current forest is used
 Type: String
 Parameter Sets: Default, GPOName, GPOGUID
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -130,7 +130,7 @@ GUID of GPO. By default all GPOs are returned
 Type: String
 Parameter Sets: GPOGUID
 Aliases: GUID, GPOID
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -145,8 +145,8 @@ Name of GPO. By default all GPOs are returned
 ```yaml
 Type: String
 Parameter Sets: GPOName
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -162,7 +162,7 @@ Include only specific domains, by default whole forest is scanned
 Type: String[]
 Parameter Sets: Default, GPOName, GPOGUID
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -177,8 +177,8 @@ Includes Owner from SYSVOL as well
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -193,8 +193,8 @@ Doesn't display GPOs that have no SYSVOL content (orphaned GPOs)
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -217,4 +217,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

@@ -41,8 +41,8 @@ Indicates whether to return the output as a hashtable.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -57,8 +57,8 @@ Specifies domains to exclude from the retrieval.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 3
@@ -73,8 +73,8 @@ Specifies additional information about the forest.
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 5
@@ -89,7 +89,7 @@ Specifies the type of folders to retrieve. Valid values are 'All', 'NTFRS', 'Emp
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: All, NTFRS, Empty
 
 Required: False
@@ -106,7 +106,7 @@ Specifies the forest name to retrieve information for.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 2
@@ -122,7 +122,7 @@ Specifies domains to include in the retrieval.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 4
@@ -137,7 +137,7 @@ Specifies the type of folders to retrieve. Valid values are 'All', 'Netlogon', '
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: All, Netlogon, Sysvol
 
 Required: False
@@ -161,4 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

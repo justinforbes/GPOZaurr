@@ -41,8 +41,8 @@ Exclude domain from search, by default whole forest is scanned
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -62,7 +62,7 @@ Exclusions should be used only if there is single report being asked for.
 Type: Object
 Parameter Sets: __AllParameterSets
 Aliases: ExcludeGroupPolicies, ExclusionsCode
-Possible values: 
+Possible values:
 
 Required: False
 Position: 1
@@ -77,8 +77,8 @@ Path to the file where the report will be saved.
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -94,7 +94,7 @@ Target different Forest, by default current forest is used
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -110,7 +110,7 @@ Accept wildcard characters: True
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: GUID
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -126,7 +126,7 @@ Accept wildcard characters: True
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Name
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -141,8 +141,8 @@ Do not auto open HTML report in default browser
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -157,8 +157,8 @@ Do not show steps in report
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -174,7 +174,7 @@ Include only specific domains, by default whole forest is scanned
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -189,8 +189,8 @@ Forces report to use online resources in HTML (using CDN most of the time), by d
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -205,8 +205,8 @@ Returns created objects after the report is done
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -221,8 +221,8 @@ Show errors in HTML report. Useful in case the report is being run as Scheduled 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -237,8 +237,8 @@ Show warnings in HTML report. Useful in case the report is being run as Schedule
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -253,8 +253,8 @@ Split report into multiple files, one for each report. This can be useful for la
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -269,8 +269,8 @@ Type of report to be generated from a list of available reports.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 0
@@ -293,4 +293,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

@@ -50,8 +50,8 @@ Define DomainName where Group Policy is located. Otherwise each domain will be c
 ```yaml
 Type: String
 Parameter Sets: Name, Guid
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -67,7 +67,7 @@ Accept wildcard characters: True
 Type: String
 Parameter Sets: Guid
 Aliases: ID
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -83,7 +83,7 @@ Define Group Policy Name to skip
 Type: String
 Parameter Sets: Name
 Aliases: GpoName, DisplayName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -106,4 +106,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

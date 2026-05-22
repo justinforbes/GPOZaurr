@@ -39,8 +39,8 @@ Specifies domains to exclude from the search.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 5
@@ -55,7 +55,7 @@ Specifies the permission types to exclude from the summary.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: GpoApply, GpoEdit, GpoCustom, GpoEditDeleteModifySecurity, GpoRead, GpoOwner, GpoRootCreate, GpoRootOwner
 
 Required: False
@@ -71,8 +71,8 @@ Provides additional forest information to speed up processing.
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 7
@@ -88,7 +88,7 @@ Specifies the target forest. By default, the current forest is used.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 4
@@ -104,7 +104,7 @@ Specifies domains to include in the search.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 6
@@ -119,7 +119,7 @@ Specifies the permission types to include in the summary.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: GpoApply, GpoEdit, GpoCustom, GpoEditDeleteModifySecurity, GpoRead, GpoOwner, GpoRootCreate, GpoRootOwner
 
 Required: False
@@ -135,7 +135,7 @@ Specifies the type of permission to permit. Options include 'Allow', 'Deny', and
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: Allow, Deny, All
 
 Required: False
@@ -151,8 +151,8 @@ Specifies the separator to use in the output.
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 8
@@ -167,7 +167,7 @@ Specifies the type of permissions to include. Options include 'AuthenticatedUser
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: AuthenticatedUsers, DomainComputers, Unknown, WellKnownAdministrative, NotWellKnown, NotWellKnownAdministrative, NotAdministrative, Administrative, All
 
 Required: False
@@ -191,4 +191,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

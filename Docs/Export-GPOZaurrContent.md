@@ -35,7 +35,7 @@ Specifies the folder path where the exported GPO files will be saved.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: Path
-Possible values: 
+Possible values:
 
 Required: True
 Position: 0
@@ -50,7 +50,7 @@ Specifies the type of report to generate. Valid values are XML or HTML. The defa
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: XML, HTML
 
 Required: False
@@ -74,4 +74,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

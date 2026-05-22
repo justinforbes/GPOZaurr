@@ -53,8 +53,8 @@ Indicates whether to retrieve only categories.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Default, Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -69,8 +69,8 @@ Specifies an array of domains to exclude from the search.
 ```yaml
 Type: String[]
 Parameter Sets: Default
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -85,8 +85,8 @@ Accept wildcard characters: True
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Default, Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -101,8 +101,8 @@ Specifies additional information about the forest.
 ```yaml
 Type: IDictionary
 Parameter Sets: Default
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -118,7 +118,7 @@ Specifies the forest name to search for Group Policy Objects.
 Type: String
 Parameter Sets: Default
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -133,8 +133,8 @@ Indicates whether to retrieve full objects.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Default, Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -149,8 +149,8 @@ Accept wildcard characters: True
 ```yaml
 Type: String[]
 Parameter Sets: Default
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -166,7 +166,7 @@ Accept wildcard characters: True
 Type: String[]
 Parameter Sets: Default
 Aliases: Name
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -181,8 +181,8 @@ Specifies the path to a specific Group Policy Object.
 ```yaml
 Type: String
 Parameter Sets: Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -198,7 +198,7 @@ Specifies an array of domains to include in the search.
 Type: String[]
 Parameter Sets: Default
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -213,8 +213,8 @@ Indicates whether to retrieve information online.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Default, Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -229,8 +229,8 @@ Indicates whether to open the output after retrieval.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Default, Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -245,8 +245,8 @@ Specifies the path to save the output.
 ```yaml
 Type: String
 Parameter Sets: Default, Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -261,7 +261,7 @@ Specifies the type of output (HTML or Object).
 ```yaml
 Type: String[]
 Parameter Sets: Default, Local
-Aliases: 
+Aliases:
 Possible values: HTML, Object
 
 Required: False
@@ -277,8 +277,8 @@ Indicates whether to retrieve a single object.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Default, Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -293,8 +293,8 @@ Accept wildcard characters: True
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Default, Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -309,8 +309,8 @@ Indicates whether to skip normalization.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Default, Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -325,8 +325,8 @@ Specifies the delimiter to use for splitting information.
 ```yaml
 Type: String
 Parameter Sets: Default, Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -341,8 +341,8 @@ Specifies the type of information to retrieve.
 ```yaml
 Type: String[]
 Parameter Sets: Default, Local
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -365,4 +365,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

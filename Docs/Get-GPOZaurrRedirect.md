@@ -43,8 +43,8 @@ Provide a date from which to start the search, by default the last X days are us
 ```yaml
 Type: DateTime
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -59,7 +59,7 @@ Choose a date property. It can be WhenCreated or WhenChanged or both. By default
 ```yaml
 Type: String[]
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
+Aliases:
 Possible values: WhenCreated, WhenChanged
 
 Required: False
@@ -75,7 +75,7 @@ Provide a date range to search for, by default the last X days are used
 ```yaml
 Type: String
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
+Aliases:
 Possible values: PastHour, CurrentHour, PastDay, CurrentDay, PastMonth, CurrentMonth, PastQuarter, CurrentQuarter, Last14Days, Last21Days, Last30Days, Last7Days, Last3Days, Last1Days
 
 Required: False
@@ -91,8 +91,8 @@ Provide a date to which to end the search, by default the last X days are used
 ```yaml
 Type: DateTime
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -107,8 +107,8 @@ Exclude domain from search, by default whole forest is scanned
 ```yaml
 Type: String[]
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -123,8 +123,8 @@ Ability to provide Forest Information from another command to speed up processin
 ```yaml
 Type: IDictionary
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -140,7 +140,7 @@ Target different Forest, by default current forest is used
 Type: String
 Parameter Sets: Default, GPOName, GPOGUID
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -156,7 +156,7 @@ Provide GPO GUID to search for. By default command returns all GPOs
 Type: String
 Parameter Sets: GPOGUID
 Aliases: GUID, GPOID
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -171,8 +171,8 @@ Provide GPO name to search for. By default command returns all GPOs
 ```yaml
 Type: String
 Parameter Sets: GPOName
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -188,7 +188,7 @@ Include only specific domains, by default whole forest is scanned
 Type: String[]
 Parameter Sets: Default, GPOName, GPOGUID
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -211,4 +211,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

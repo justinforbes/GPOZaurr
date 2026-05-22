@@ -34,8 +34,8 @@ Indicates whether the backup path should include a timestamp.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -50,8 +50,8 @@ The path where the GPOZaurr folders will be backed up.
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 0
@@ -66,8 +66,8 @@ Specifies domains to exclude from processing.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 6
@@ -82,8 +82,8 @@ Specifies additional forest information.
 ```yaml
 Type: IDictionary
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 8
@@ -98,8 +98,8 @@ Specifies the name of the folder to remove.
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 3
@@ -114,7 +114,7 @@ Specifies the type of folders to remove. Options are 'NTFRS' or 'Empty'.
 ```yaml
 Type: String
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: NTFRS, Empty
 
 Required: True
@@ -131,7 +131,7 @@ Specifies the forest to target.
 Type: String
 Parameter Sets: __AllParameterSets
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: 5
@@ -147,7 +147,7 @@ Specifies domains to include in processing.
 Type: String[]
 Parameter Sets: __AllParameterSets
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: 7
@@ -162,8 +162,8 @@ Limits the number of folders to process.
 ```yaml
 Type: Int32
 Parameter Sets: __AllParameterSets
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: 4
@@ -178,7 +178,7 @@ Specifies the type of folders to remove. Options are 'All', 'Netlogon', or 'Sysv
 ```yaml
 Type: String[]
 Parameter Sets: __AllParameterSets
-Aliases: 
+Aliases:
 Possible values: All, Netlogon, Sysvol
 
 Required: False
@@ -202,4 +202,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-

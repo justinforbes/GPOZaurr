@@ -192,4 +192,3 @@ Sets GPO Owner to Domain Admins or other choosen account
 
 ### [Skip-GroupPolicy](Skip-GroupPolicy.md)
 Used within ScriptBlocks only. Allows to exclude Group Policy from being affected by fixes
-

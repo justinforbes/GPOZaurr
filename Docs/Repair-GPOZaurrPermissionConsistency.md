@@ -51,8 +51,8 @@ Specifies an array of domains to exclude from the repair process.
 ```yaml
 Type: String[]
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -67,8 +67,8 @@ Specifies additional information about the forest.
 ```yaml
 Type: IDictionary
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -84,7 +84,7 @@ Specifies the forest where the GPOs are located.
 Type: String
 Parameter Sets: Default, GPOName, GPOGUID
 Aliases: ForestName
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -100,7 +100,7 @@ Specifies the GUID of the GPO to repair.
 Type: String
 Parameter Sets: GPOGUID
 Aliases: GUID, GPOID
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -115,8 +115,8 @@ Specifies the name of the GPO to repair.
 ```yaml
 Type: String
 Parameter Sets: GPOName
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -132,7 +132,7 @@ Specifies an array of domains to include in the repair process.
 Type: String[]
 Parameter Sets: Default, GPOName, GPOGUID
 Aliases: Domain, Domains
-Possible values: 
+Possible values:
 
 Required: False
 Position: named
@@ -147,8 +147,8 @@ Specifies the maximum number of GPOs to process.
 ```yaml
 Type: Int32
 Parameter Sets: Default, GPOName, GPOGUID
-Aliases: 
-Possible values: 
+Aliases:
+Possible values:
 
 Required: False
 Position: named
@@ -171,4 +171,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - None
-
