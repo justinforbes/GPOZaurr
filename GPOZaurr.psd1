@@ -25,15 +25,15 @@
         }, @{
             Guid            = 'ee272aa8-baaa-4edf-9f45-b6d6f7d844fe'
             ModuleName      = 'PSSharedGoods'
-            ModuleVersion   = '0.0.313.1'
+            ModuleVersion   = '0.0.312'
         }, @{
             Guid            = '9fc9fd61-7f11-4f4b-a527-084086f1905f'
             ModuleName      = 'ADEssentials'
-            ModuleVersion   = '1.0.4.1'
+            ModuleVersion   = '1.0.4'
         }, @{
             Guid            = 'a7bdf640-f5cb-4acf-9de0-365b322d245c'
             ModuleName      = 'PSWriteHTML'
-            ModuleVersion   = '1.41.0.5'
+            ModuleVersion   = '1.41.0'
         })
     RootModule           = 'GPOZaurr.psm1'
     ScriptsToProcess     = @()
